@@ -55,7 +55,7 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
               <div class="col-lg-6">
                 <div class="single-dog-block__info--race">
                   <h2>Pies w typie:</h2>
-                 <span><?php echo $dogs_info['race']; ?></span>
+                 <span class="main"><?php echo $dogs_info['race']; ?></span>
                  </div>
               </div>
               <div class="col-lg-6">
@@ -63,9 +63,9 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
                  <h2>Płeć:</h2>
                         <?php 
                         if($dogs_info['sex'] == "first"){
-                            echo "<span>samiec</span>";
+                            echo "<span class='main'>samiec</span>";
                             }else 
-                        {echo "<span>suczka</span>";}
+                        {echo "<span class='main'>suczka</span>";}
                         
                         ?>
 </div>
@@ -79,16 +79,16 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 <?php  
 
 if($dogs_info['size'] == "first"){
-    echo "<span>mały</span>";
+    echo "<span class='main'>mały</span>";
    }elseif ($dogs_info['size'] == "second")
-{echo "<span>średni</span>";}else {echo "<span>duży</span>";}
+{echo "<span class='main'>średni</span>";}else {echo "<span class='main'>duży</span>";}
 ?>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="single-dog-block__info--age">
 <h2>Wiek:</h2>
-<span>
+<span class="main">
   <?php
 echo $dogs_info['age']; ?>
 </span>

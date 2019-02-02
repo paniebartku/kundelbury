@@ -4,12 +4,14 @@
     &__content {margin-top:2rem; margin-bottom: 2rem;}
     &__name {margin-bottom: 1rem;}
     h2{display: inline-block; margin-bottom: 0.7rem;}
-    span{font-size:1.2rem;}
+    
     &__info {
+        .main{font-size:1.2rem; font-weight: bold;}
         &--content {margin-top: 1rem;}
         .row {margin-bottom: 1rem;}
     }
     &__guardian{
+        h2 {margin-bottom:0.5rem;}
         h3 {font-style: italic;}
     }
 }
