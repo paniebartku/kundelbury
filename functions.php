@@ -8,6 +8,8 @@ class Functions {
 	    $this->theme_setup();
         $this->add_actions();
         $this->add_filters();
+        
+        
     }
 
     public function theme_setup() {
@@ -25,11 +27,13 @@ class Functions {
         add_action('init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
         add_action( 'widgets_init', array($this,'footer_sidebars')  );
+        add_action( 'pre_get_posts', array($this, 'parse_request') );
 
     }
 
     public function add_filters(){
         add_filter('piklist_admin_pages', array($this,'medor_settings'));
+        add_filter( 'post_type_link', array($this, 'remove_slug' ),10, 3 );
     }
 
     public function include_custom_jquery() {
@@ -134,34 +138,34 @@ class Functions {
      }
     
  
-    
-    
+     function remove_slug( $post_link, $post ) {
+        
+            if ( 'dogs' != $post->post_type || 'publish' != $post->post_status ) {
+                return $post_link;
+            }
+        
+            $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+        
+            return $post_link;
+        }
+        function parse_request( $query ) {
+            
+                if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+                    return;
+                }
+            
+                if ( ! empty( $query->query['name'] ) ) {
+                    $query->set( 'post_type', array( 'post', 'dogs', 'page' ) );
+                }
+            }
 
 
 
 }
 
 $functions = new Functions;
-function na_remove_slug( $post_link, $post, $leavename ) {
-    
-        if ( 'dogs' != $post->post_type || 'publish' != $post->post_status ) {
-            return $post_link;
-        }
-    
-        $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
-    
-        return $post_link;
-    }
-    add_filter( 'post_type_link', 'na_remove_slug', 10, 3 );
 
-    function na_parse_request( $query ) {
-        
-            if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
-                return;
-            }
-        
-            if ( ! empty( $query->query['name'] ) ) {
-                $query->set( 'post_type', array( 'post', 'dogs', 'page' ) );
-            }
-        }
-        add_action( 'pre_get_posts', 'na_parse_request' );
+    
+
+  
+       
