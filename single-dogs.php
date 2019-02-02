@@ -48,11 +48,14 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
             <div class="col-lg-6">
               
               <div class="single-dog-block__info">
+            <div class="row">
+              <div class="col-lg-6">
                 <div class="single-dog-block__info--race">
                   <h2>Pies w typie:</h2>
                  <span><?php echo $dogs_info['race']; ?></span>
                  </div>
-
+              </div>
+              <div class="col-lg-6">
                  <div class="single-dog-block__info--sex">
                  <h2>Płeć:</h2>
                         <?php 
@@ -63,6 +66,11 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
                         
                         ?>
 </div>
+
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
 <div class="single-dog-block__info--size">
 <h2>Rozmiar:</h2>
 <?php  
@@ -73,14 +81,19 @@ if($dogs_info['size'] == "first"){
 {echo "<span>średni</span>";}else {echo "<span>duży</span>";}
 ?>
 </div>
+</div>
+<div class="col-lg-6">
 <div class="single-dog-block__info--age">
 <h2>Wiek:</h2>
 <span>
   <?php
 echo $dogs_info['age']; ?>
 </span>
-
 </div>
+</div>
+</div>
+
+
 <div class="single-dog-block__info--content">
 <?php
 if (have_posts()) :

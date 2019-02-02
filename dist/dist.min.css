@@ -327,6 +327,8 @@ footer {
     font-size: 1.2rem; }
   .single-dog-block__info--content {
     margin-top: 1rem; }
+  .single-dog-block__info .row {
+    margin-bottom: 1rem; }
   .single-dog-block__guardian h3 {
     font-style: italic; }
 
