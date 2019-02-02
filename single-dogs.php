@@ -40,7 +40,10 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
               </ul>
               <div class="single-dog-block__guardian">
                 <h2>Opiekun wirtualny:</h2>
-                <h3><?php echo $dogs_info['guardian']; ?></h3> 
+                <?php if(!empty($dogs_info['guardian'])){
+                   echo '<h3>'.$dogs_info['guardian'].'</h3>'; }else{
+                   echo '<h3>Poszukiwany</h3>';
+                 }?>
                  </div>
             </div>
 
