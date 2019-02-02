@@ -1,0 +1,63 @@
+.home-block {
+    &__parallax, &__parallax--second {
+        height: 74vh;
+        width: 100%;
+        background-size: initial;
+        background-repeat: no-repeat;
+        background-position: 73% 64%;
+        background-attachment: fixed;
+        position: relative;
+    }
+    &__into-parallax{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &--white{
+            background-color:rgba(0, 0, 0,0.7);
+            padding: 1.0rem;
+            h1{
+                line-height: 1.24;
+                color:white;
+            }
+        }
+    }
+    &__icons {
+
+    }
+    &__icon {
+        margin-top:-5rem;
+        background-color: white;
+        padding: 2rem;
+        text-align: center;
+        color:$orange;
+        margin-bottom: 6rem;
+        &:hover{
+            background-color:$orange;
+            color:white;
+            transition: 0.5s;
+        }
+    }
+
+
+}
+
+@media(max-width:1366px){
+    .home-block {
+        &__parallax {
+            height: 90vh;
+            background-position: 56% 40%;
+          
+        }
+    }    
+}
+ 
+.news {
+    margin-bottom: 3rem;
+    &-elem {
+        margin-bottom: 2rem;
+    }
+}
+
+.row__header {
+    margin-top:2rem; margin-bottom: 2rem;
+}

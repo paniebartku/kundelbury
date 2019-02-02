@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    background-color: $orange;
+    font-family: "Raleway";
+    &:hover {
+        box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+        color:white;
+    }
+    &__primary {
+        padding: 0.5rem 1rem;
+        i {margin-left: 0.4rem;}
+    }
+}

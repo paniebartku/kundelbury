@@ -1,0 +1,89 @@
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar{
+
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    transition: 0.3s;
+    background: white;
+    .navbar-brand {
+      margin-left:2rem;
+      margin-right:2rem;
+    }
+  }
+
+  .scrolled{
+    padding:0.5rem;
+    transition: 0.3s;
+    .navbar-brand {
+      img {
+        @include transition;
+        -webkit-transform:scale(0.7);
+         transform:scale(0.7);
+      }
+    }
+  }
+  .scrolledAgain {
+    .navbar-brand {
+      img {
+        -webkit-transform:scale(1.0);
+         transform:scale(1.0);
+         @include transition;
+      }
+    }
+  }
+
+.navbar-nav {
+  .active {background: $orange; color:white!important;}
+}
+.nav-item {
+  .active {color:white!important}
+  .nav-link {
+    &:hover {
+      color: white!important;
+      background: $orange;
+      transition: 0.2s ease-out;
+    }
+  }
+}
+li.nav-item.active a.nav-link {color:white!important;}
+
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: white;
+  text-decoration: none;
+  background-color: $orange;
+  @include transition;
+}
+
+@media(max-width:991px){
+  .dropdown-menu {border:none; text-align: center;}
+}
+
+.navbar-text{
+  display:block; padding:0;
+  &:hover {
+    background: $orange;
+    cursor: pointer;
+    color: white;
+    @include transition; 
+  }
+  a {display: block;
+    &:hover{color:white;}
+    i {padding-top: 0.5rem;
+      display: block;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      &:hover {color:white;}
+    }
+  }
+
+  }
+

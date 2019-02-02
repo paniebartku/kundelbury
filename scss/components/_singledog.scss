@@ -1,0 +1,30 @@
+.single-dog-block{padding-top:2.125rem;
+    &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem; background-color: $orange;}
+    &__title {margin-bottom: 1rem; color: white;}
+    &__content {margin-top:2rem; margin-bottom: 2rem;}
+    &__name {margin-bottom: 1rem;}
+    h2{display: inline-block; margin-bottom: 0.7rem;}
+    span{font-size:1.2rem;}
+    &__info {
+        &--content {margin-top: 1rem;}
+    }
+    &__guardian{
+        h3 {font-style: italic;}
+    }
+}
+
+.dogs-gallery {
+    ul {padding:0;}
+    li {display: inline; margin-right: 3px;}
+    &__photo--main {width:100%; margin-bottom: 0.4rem;}
+    &__photo--thumbnail {max-height: 6.37rem; cursor: pointer; margin-bottom:0.4rem; }
+}
+
+
+.for-adoption {
+    &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem; background-color: $orange;}
+    &__title {margin-bottom: 1rem; color: white;}
+    &__content {margin-top:2rem;}
+    &__dogs-loop {margin-top: 2rem;}
+}
+ 

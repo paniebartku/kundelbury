@@ -1,0 +1,60 @@
+figure{
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+    cursor: pointer;
+    
+    &:hover {
+        img {
+            opacity: 1;
+            -webkit-transform: scale3d(1.2, 1.2, 1);
+            transform: scale3d(1.2, 1.2, 1);
+        }
+    }
+    img{
+        opacity: 0.9;
+      -webkit-transition: all 0.4s linear;
+              transition: all 0.4s linear;
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+
+              &:hover {
+                .figcaption{
+                    background-size: 100%;
+                    opacity: 1;
+                }    
+              }
+    }
+}
+figcaption{
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+    display: table;
+    &:hover {
+        div{
+            opacity: 1;
+            top: 0;
+        }
+    }
+
+    div{
+        display: table-cell;
+        vertical-align: bottom;
+        position: relative;
+        opacity: 0;
+        color: #fff;
+        transition: 0.3s;
+    h3{
+        margin-bottom: 2rem;
+        background: $orange;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    }
+}

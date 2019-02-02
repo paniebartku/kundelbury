@@ -1,0 +1,11 @@
+body { padding-top: 6rem; }
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,900&subset=latin-ext'); /*font-family: 'Raleway', sans-serif;*/
+
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Raleway';
+}
+
+a {color: $orange;
+&:hover {color: $orange_deep;}
+}
