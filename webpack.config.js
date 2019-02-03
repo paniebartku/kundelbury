@@ -11,7 +11,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
   entry: ['./js/medor_scripts.js', './scss/medor_scripts.scss'],
   output: {
-    filename: './dist/dist.js',
+    filename: './dist/dist.min.js',
     path: path.resolve(__dirname)
     
   },
@@ -40,28 +40,35 @@ module.exports = {
         ]
       },
       // compile all .scss files to plain old css
+      
       {
-        test: /\.(sass|scss)$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                // you can specify a publicPath here
-                // by default it use publicPath in webpackOptions.output
-                publicPath: '../'
-              }
-            },
-            "css-loader", 'sass-loader'
-          ]
-        
-      }
+          
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader", options: {} },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('autoprefixer')({
+                  'browsers': ['> 1%', 'last 2 versions']
+                }),
+              ]
+            }
+          },
+          { loader: "sass-loader", options: {} },
+        ]
+      },
+      
     ]
   },
   plugins: [
     // extract css into dedicated file
     new MiniCssExtractPlugin({
       filename: './dist/dist.min.css',
-      
+      publicPath: '../',
     })
   ],
   optimization: {
