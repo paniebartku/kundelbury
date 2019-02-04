@@ -17,6 +17,13 @@
     }
   }
 
+  @media(max-width:575px){
+    .navbar{
+          .navbar-brand {
+            margin-left:0;
+          }
+    }
+  }
   .scrolled{
     padding:0.5rem;
     transition: 0.3s;

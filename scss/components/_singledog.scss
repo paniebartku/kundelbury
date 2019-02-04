@@ -18,9 +18,74 @@
 
 .dogs-gallery {
     ul {padding:0;}
-    li {display: inline; margin-right: 3px;}
+    li {display: inline; margin-right: 0;}
     &__photo--main {width:100%; margin-bottom: 0.4rem;}
-    &__photo--thumbnail {max-height: 6.37rem; cursor: pointer; margin-bottom:0.4rem; }
+    &__photo--thumbnail {max-height: 6.38rem; cursor: pointer; margin-bottom:0.4rem; }
+}
+
+@media (-webkit-min-device-pixel-ratio:0) { 
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 6.53rem;}
+    }
+
+}
+
+@media(min-width:992px)and(max-width:1199px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 5.4rem;}
+    }
+       
+}
+
+@media(min-width:768px)and(max-width:991px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 8.39rem;}
+    }
+       
+}
+
+@media(min-width:576px)and(max-width:767px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 6.14rem;}
+    }
+       
+}
+
+@media(max-width:414px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 4.58rem;}
+    }
+       
+}
+
+
+@media(max-width:375px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 4.09rem;}
+    }
+       
+}
+
+@media(max-width:360px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 3.9rem;}
+    }
+       
+}
+
+@media(max-width:320px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 3.4rem;}
+    }
+       
+}
+
+
+@media(max-width:320px){
+    .dogs-gallery {
+        &__photo--thumbnail {max-height: 3.2rem;}
+    }
+       
 }
 
 

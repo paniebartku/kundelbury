@@ -36,7 +36,7 @@ get_header();
       <div class="col-lg-4 col-md-4 home-block__icons icons__first">
         <a href="<?php echo $icon1_url; ?>"/>
           <div class="home-block__icon shadow-sm">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/2_v200.png"/>
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/pets.png"/>
             <h3><?php echo $icon1; ?></h3>
           </div>
         </a>
