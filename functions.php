@@ -45,7 +45,7 @@ class Functions {
         wp_enqueue_style('medor', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.0.2', 'all');
         wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', false);
         wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true);
-        wp_enqueue_script('medorjs', get_template_directory_uri() . '/dist/dist.js', array(), '1.0.1', true);
+        wp_enqueue_script('medorjs', get_template_directory_uri() . '/dist/dist.min.js', array(), '1.0.1', true);
     }
     public function removes(){
         remove_post_type_support('post', 'excerpt');

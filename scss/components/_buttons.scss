@@ -14,12 +14,22 @@
     color: white;
     background-color: $orange;
     font-family: "Raleway";
+    padding: 0.5rem 1rem;
+    &__primary {
+       
+ 
+         &--right{
+            
+         i {margin-left: 0.4rem;}
+         } 
+         &--left{
+           
+         i {margin-right: 0.4rem;}
+         }
+     }
     &:hover {
         box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
         color:white;
     }
-    &__primary {
-        padding: 0.5rem 1rem;
-        i {margin-left: 0.4rem;}
-    }
+   
 }

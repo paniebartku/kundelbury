@@ -67,7 +67,7 @@ get_header();
         <h2>Aktualności</h2>
       </div>
       <div class="col-lg-5 text-right">
-        <a class="btn btn__primary" href="#" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
+        <a class="btn btn__primary--right" href="#" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
       </div>
     </div>
     <div class="row">

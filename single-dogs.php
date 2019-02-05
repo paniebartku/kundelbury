@@ -26,6 +26,11 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
     </div>
     </div>
     <div class="container single-dog-block__content">
+      <div class="row">
+        <div class="col-sm-12">
+        <a class="btn btn__primary--left" href="#" role="button"><i class="fas fa-angle-left"></i>Powrót do galerii psów</a>
+        </div>
+      </div>
 <div class="row">
         
           <div class="col-lg-6">

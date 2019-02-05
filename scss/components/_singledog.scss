@@ -1,7 +1,11 @@
 .single-dog-block{padding-top:2.125rem;
     &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem;margin-top: 2rem; background-color: $orange;}
     &__title {margin-bottom: 1rem; color: white;}
-    &__content {margin-top:2rem; margin-bottom: 2rem;}
+    &__content {margin-top:2rem; margin-bottom: 2rem; 
+        .row:first-child{
+        margin-bottom: 1.5rem;
+    }
+}
     &__name {margin-bottom: 1rem;}
     h2{display: inline-block; margin-bottom: 0.7rem;}
     
@@ -14,6 +18,7 @@
         h2 {margin-bottom:0.5rem;}
         h3 {font-style: italic;}
     }
+   
 }
 
 .dogs-gallery {
