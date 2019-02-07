@@ -15,6 +15,16 @@ Template: page-templates/page-home
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'medium'
       ,'button' => 'Add'
+      ,'validate' => array(
+        array(
+          'type' => 'limit'
+          ,'options' => array(
+            'min' => 0
+            ,'max' => 1
+          )
+          ,'message' => 'Przykro mi, ale można dodać tylko jedno zdjęcie w danej sekcji. Jedno "dodaj" to jedno zdjęcie :)'
+        )
+      )
     )
   ));
 
@@ -106,6 +116,16 @@ piklist('field', array(
     'modal_title' => 'Add File(s)'
     ,'preview_size' => 'medium'
     ,'button' => 'Add'
+    ,'validate' => array(
+      array(
+        'type' => 'limit'
+        ,'options' => array(
+          'min' => 0
+          ,'max' => 1
+        )
+        ,'message' => 'Przykro mi, ale można dodać tylko jedno zdjęcie w danej sekcji. Jedno "dodaj" to jedno zdjęcie :)'
+      )
+    )
   )
 ));
 

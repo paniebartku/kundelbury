@@ -1,6 +1,6 @@
 <?php
 
-require get_template_directory() . '/views/pets.php';
+require get_template_directory() . '/views/dogs.php';
 get_header();
 
 // Grab all of our custom post types
@@ -13,19 +13,19 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 
 
 
-<div class="container-fluid single-pet-block__orange-row">
+<div class="container-fluid single-dog-block__orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="single-pet-block__title ">
+        <div class="single-dog-block__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
     </div>
     </div>
     </div>
-    <div class="container single-pet-block__content">
+    <div class="container single-dog-block__content">
       <div class="row">
         <div class="col-sm-12">
         <a class="btn btn__primary--left" href="#" role="button"><i class="fas fa-angle-left"></i>Powrót do galerii psów</a>
@@ -34,16 +34,16 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 <div class="row">
         
           <div class="col-lg-6">
-              <div class="pets-gallery">
-              <img class="img-fluid pets-gallery__photo--main" src="<?php echo $pet_image_main; ?>" alt="" />
+              <div class="dogs-gallery">
+              <img class="img-fluid dogs-gallery__photo--main" src="<?php echo $dogs_image_main; ?>" alt="" />
               <ul>
-                <li><img class="img-fluid pets-gallery__photo--thumbnail" src="<?php echo $pet_image_main; ?>" alt="" /></li>
-                <li><img class="img-fluid pets-gallery__photo--thumbnail" src="<?php echo $adi1; ?>" alt="" /></li>
-                <li><img class="img-fluid pets-gallery__photo--thumbnail" src="<?php echo $adi2; ?>" alt="" /></li>
-                <li><img class="img-fluid pets-gallery__photo--thumbnail" src="<?php echo $adi3; ?>" alt="" /></li>
-                <li><img class="img-fluid pets-gallery__photo--thumbnail" src="<?php echo $adi4; ?>" alt="" /></li>
+                <li><img class="img-fluid dogs-gallery__photo--thumbnail" src="<?php echo $dogs_image_main; ?>" alt="" /></li>
+                <li><img class="img-fluid dogs-gallery__photo--thumbnail" src="<?php echo $adi1; ?>" alt="" /></li>
+                <li><img class="img-fluid dogs-gallery__photo--thumbnail" src="<?php echo $adi2; ?>" alt="" /></li>
+                <li><img class="img-fluid dogs-gallery__photo--thumbnail" src="<?php echo $adi3; ?>" alt="" /></li>
+                <li><img class="img-fluid dogs-gallery__photo--thumbnail" src="<?php echo $adi4; ?>" alt="" /></li>
               </ul>
-              <div class="single-pet-block__guardian">
+              <div class="single-dog-block__guardian">
                 <h2>Opiekun wirtualny:</h2>
                 <?php if(!empty($dogs_info['guardian'])){
                    echo '<h3>'.$dogs_info['guardian'].'</h3>'; }else{
@@ -55,16 +55,16 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
             </div>
             <div class="col-lg-6">
               
-              <div class="single-pet-block__info">
+              <div class="single-dog-block__info">
             <div class="row">
               <div class="col-lg-6">
-                <div class="single-pet-block__info--race">
+                <div class="single-dog-block__info--race">
                   <h2>Pies w typie:</h2>
                  <span class="main"><?php echo $dogs_info['race']; ?></span>
                  </div>
               </div>
               <div class="col-lg-6">
-                 <div class="single-pet-block__info--sex">
+                 <div class="single-dog-block__info--sex">
                  <h2>Płeć:</h2>
                         <?php 
                         if($dogs_info['sex'] == "first"){
@@ -79,7 +79,7 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 </div>
 <div class="row">
 <div class="col-lg-6">
-<div class="single-pet-block__info--size">
+<div class="single-dog-block__info--size">
 <h2>Rozmiar:</h2>
 <?php  
 
@@ -96,7 +96,7 @@ else {echo "<span class='main'>bardzo duży</span>";}
 </div>
 </div>
 <div class="col-lg-6">
-<div class="single-pet-block__info--age">
+<div class="single-dog-block__info--age">
 <h2>Wiek:</h2>
 <span class="main">
   <?php
@@ -107,7 +107,7 @@ echo $dogs_info['age']; ?>
 </div>
 
 
-<div class="single-pet-block__info--content">
+<div class="single-dog-block__info--content">
 <?php
 if (have_posts()) :
   while (have_posts()) :

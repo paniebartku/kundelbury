@@ -26,6 +26,7 @@ class Functions {
         add_action( 'wp_enqueue_scripts', array($this, 'load_scripts_and_styles') );
         add_action('init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
+        add_action( 'init', array($this,'cats_post_type') );
         add_action( 'widgets_init', array($this,'footer_sidebars')  );
         add_action( 'pre_get_posts', array($this, 'parse_request') );
 
@@ -34,6 +35,7 @@ class Functions {
     public function add_filters(){
         add_filter('piklist_admin_pages', array($this,'medor_settings'));
         add_filter( 'post_type_link', array($this, 'remove_slug' ),10, 3 );
+        add_filter( 'enter_title_here', array($this,'wpb_change_title_text' ));
     }
 
     public function include_custom_jquery() {
@@ -73,6 +75,30 @@ class Functions {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => "dogs", 'with_front' => false ),
+            'menu_icon'   => 'dashicons-image-filter',
+          )
+        );
+      }
+
+      public function cats_post_type() {
+        register_post_type('cats',
+          array(
+            'labels' => array(
+              'name' => __( 'Koty' ),
+              'singular_name' => __( 'Kot' ),
+              'add_new' => 'Dodaj Kota',
+              'all_items' => 'Wszystkie Koty',
+              'add_new_item' => 'Dodaj Kota',
+              'edit_item' => 'Edytuj Kota',
+              'new_item' => 'Nowy Kot',
+              'view_item' => 'Zobacz Kota',
+              'search_item' => 'Szukaj Kota',
+              'not_found' => 'Kota nie znaleziono',
+              'not_found_in_trash' => 'Nie ma Kota w koszu',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => "cats", 'with_front' => false ),
             'menu_icon'   => 'dashicons-image-filter',
           )
         );
@@ -158,6 +184,20 @@ class Functions {
                     $query->set( 'post_type', array( 'post', 'dogs', 'page' ) );
                 }
             }
+
+            function wpb_change_title_text( $title ){
+                $screen = get_current_screen();
+             
+                if  ( 'cats' == $screen->post_type ) {
+                     $title = 'Wpisz imię kota';
+                }
+                if  ( 'dogs' == $screen->post_type ) {
+                    $title = 'Wpisz imię psa';
+               }
+             
+                return $title;
+            }
+            
 
 
 

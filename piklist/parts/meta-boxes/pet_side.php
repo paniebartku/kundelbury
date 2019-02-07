@@ -1,16 +1,19 @@
 <?php
 
 /*
-Title: Medor Aktualności
-Post Type: post
+Title: Główny obrazek zwierzaka
+Post Type: dogs, cats
 Context: side
+Order: 2
 */
+
 
 piklist('field', array(
     'type' => 'file'
-    ,'field' => 'post_image'
+    ,'field' => 'pet_image'
     ,'scope' => 'post_meta'
-    ,'label' => 'Obrazek postu'
+    ,'label' => 'Dodaj obrazek zwierzaka'
+    ,'description' => 'Rozmiar 540px x 540px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'small'
@@ -27,9 +30,4 @@ piklist('field', array(
           ,'message' => 'Przykro mi, ale można dodać tylko jedno zdjęcie w danej sekcji. Jedno "dodaj" to jedno zdjęcie :)'
         )
       )
-    ,'attributes' => array(
-        'wrapper_class' => 'post_content'
-        ,'style' => 'width: 100%'
-        ,'contex' => 'side'
-      )
-  ));
+    ));
