@@ -84,9 +84,14 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 <?php  
 
 if($dogs_info['size'] == "first"){
-    echo "<span class='main'>mały</span>";
+    echo "<span class='main'>mikropies</span>";
    }elseif ($dogs_info['size'] == "second")
-{echo "<span class='main'>średni</span>";}else {echo "<span class='main'>duży</span>";}
+  {echo "<span class='main'>mały</span>";}
+  elseif ($dogs_info['size'] == "third"){echo "<span class='main'>średni</span>";}
+  elseif ($dogs_info['size'] == "fourth"){echo "<span class='main'>duży</span>";}
+
+
+else {echo "<span class='main'>bardzo duży</span>";}
 ?>
 </div>
 </div>

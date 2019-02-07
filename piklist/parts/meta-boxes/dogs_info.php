@@ -42,9 +42,11 @@ piklist('field', array(
         ,'label' => __('Rozmiar psiaka')
         ,'columns' => 4
         ,'choices' => array(
-            'first' => 'Mały',
-            'second' => 'Średni',
-            'third' => 'Duży'
+            'first' => 'Mikropies',
+            'second' => 'Mały',
+            'third' => 'Średni',
+            'fourth' => 'Duży',
+            'fifth' => 'Bardzo duży'
           
         )
       )

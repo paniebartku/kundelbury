@@ -20,7 +20,7 @@ get_header();
         <div class="row">
           <div class="col-lg-7">
             <div class="home-block__into-parallax--white">
-              <h1>Nie ma nikogo, kto lubiłby ból dla samego bólu, szukał go tylko po to, by go poczuć, po prostu dlatego, że to ból...</h1>
+              <h1><?php echo $parallax_description; ?></h1>
             </div>
            </div>
         </div>

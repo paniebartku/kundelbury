@@ -14,6 +14,7 @@ piklist('field', array(
     ,'scope' => 'post_meta'
     
     ,'label' => 'Dodaj obrazek psa'
+    ,'description' => 'Rozmiar 540px x 540px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'small'
@@ -28,6 +29,7 @@ piklist('field', array(
     ,'scope' => 'post_meta'
   
     ,'label' => 'Dodaj obrazek psa'
+    ,'description' => 'Rozmiar 540px x 540px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'small'
@@ -41,6 +43,7 @@ piklist('field', array(
     ,'scope' => 'post_meta'
   
     ,'label' => 'Dodaj obrazek psa'
+    ,'description' => 'Rozmiar 540px x 540px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'small'
@@ -54,6 +57,7 @@ piklist('field', array(
     ,'scope' => 'post_meta'
   
     ,'label' => 'Dodaj obrazek psa'
+    ,'description' => 'Rozmiar 540px x 540px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'small'

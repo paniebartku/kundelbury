@@ -9,6 +9,8 @@ $myupload = get_post_meta($image);
 $parallax = wp_get_attachment_url($image);
 }
 
+$parallax_description = get_post_meta($post->ID, 'parallax_description', true);
+
 $icon1 = get_post_meta($post->ID, 'icon1', true);
 $icon1_url = get_post_meta($post->ID, 'icon1_url', true); 
 $icon2 = get_post_meta($post->ID, 'icon2', true);

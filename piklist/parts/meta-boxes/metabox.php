@@ -10,10 +10,24 @@ Template: page-templates/page-home
     ,'field' => 'parallax'
     ,'scope' => 'post_meta'
     ,'label' => 'Obrazek Parallaxy'
+    ,'description' => 'Obrazek o rozmiarach 1920px × 1280px'
     ,'options' => array(
       'modal_title' => 'Add File(s)'
       ,'preview_size' => 'medium'
       ,'button' => 'Add'
+    )
+  ));
+
+  piklist('field', array(
+    'type' => 'textarea'
+    ,'field' => 'parallax_description'
+    ,'scope' => 'post_meta'
+    ,'label' => 'Nagłówek Parallaxy'
+    ,'attributes' => array(
+      'rows' => 5,
+      'cols' => 55
+      ,
+      'class' => 'medium-text'
     )
   ));
 
@@ -87,6 +101,7 @@ piklist('field', array(
   ,'field' => 'parallax_second'
   ,'scope' => 'post_meta'
   ,'label' => 'Obrazek dolnej parallaxy'
+  ,'description' => 'Obrazek o rozmiarach 1920px × 1280px'
   ,'options' => array(
     'modal_title' => 'Add File(s)'
     ,'preview_size' => 'medium'
