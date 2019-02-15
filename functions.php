@@ -19,6 +19,7 @@ class Functions {
         add_theme_support('menus');
         register_nav_menu('primary', 'Główne menu');
         add_theme_support( 'custom-logo');
+        add_theme_support( 'post-thumbnails' );
     }
 
     public function add_actions() {
@@ -27,6 +28,8 @@ class Functions {
         add_action('init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
         add_action( 'init', array($this,'cats_post_type') );
+        add_action( 'init', array($this,'problems_post_type') );
+        add_action( 'init', array($this,'gallery_post_type') );
         add_action( 'widgets_init', array($this,'footer_sidebars')  );
         add_action( 'pre_get_posts', array($this, 'parse_request') );
 
@@ -51,6 +54,7 @@ class Functions {
     }
     public function removes(){
         remove_post_type_support('post', 'excerpt');
+        remove_post_type_support( 'page', 'comments' );
     }
 
    
@@ -98,8 +102,62 @@ class Functions {
             ),
             'public' => true,
             'has_archive' => true,
+            
             'rewrite' => array('slug' => "cats", 'with_front' => false ),
             'menu_icon'   => 'dashicons-image-filter',
+          )
+        );
+      }
+
+      
+      public function problems_post_type() {
+        register_post_type('problems',
+          array(
+            'labels' => array(
+              'name' => __( 'Nasze problemy' ),
+              'singular_name' => __( 'Problem' ),
+              'add_new' => 'Dodaj Problem',
+              'all_items' => 'Wszystkie Problemy',
+              'add_new_item' => 'Dodaj Problem',
+              'edit_item' => 'Edytuj Problem',
+              'new_item' => 'Nowy Problem',
+              'view_item' => 'Zobacz Problem',
+              'search_item' => 'Szukaj Problemu',
+              'not_found' => 'Problemu nie znaleziono',
+              'not_found_in_trash' => 'Nie ma Problemu w koszu',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => "problems", 'with_front' => false ),
+            'menu_icon'   => 'dashicons-image-filter',
+            'supports' => array('title','editor','excerpt'),
+          )
+        );
+      }
+
+      
+
+      public function gallery_post_type() {
+        register_post_type('gallery',
+          array(
+            'labels' => array(
+              'name' => __( 'Galeria' ),
+              'singular_name' => __( 'Zdjęcie' ),
+              'add_new' => 'Dodaj Zdjęcie',
+              'all_items' => 'Wszystkie Zdjęcia',
+              'add_new_item' => 'Dodaj Zdjęcie',
+              'edit_item' => 'Edytuj Zdjęcie',
+              'new_item' => 'Nowe Zdjęcie',
+              'view_item' => 'Zobacz Zdjęcie',
+              'search_item' => 'Szukaj Zdjęcia',
+              'not_found' => 'Zdjęcia nie znaleziono',
+              'not_found_in_trash' => 'Nie ma Zdjęcia w koszu',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => "gallery", 'with_front' => false ),
+            'menu_icon'   => 'dashicons-image-filter',
+            'supports' => array('title','excerpt', 'thumbnail'),
           )
         );
       }
@@ -169,7 +227,7 @@ class Functions {
             if ( 'dogs' != $post->post_type || 'publish' != $post->post_status ) {
                 return $post_link;
             }
-        
+         
             $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
         
             return $post_link;
@@ -181,7 +239,7 @@ class Functions {
                 }
             
                 if ( ! empty( $query->query['name'] ) ) {
-                    $query->set( 'post_type', array( 'post', 'dogs', 'page' ) );
+                    $query->set( 'post_type', array( 'post', 'dogs', 'cats', 'problems', 'page' ) );
                 }
             }
 
@@ -205,7 +263,19 @@ class Functions {
 
 $functions = new Functions;
 
-    
+add_filter('manage_gallery_posts_columns', 'gallery_column', 10);
+add_action('manage_gallery_posts_custom_column', 'gallery_column_content', 10, 2);
 
-  
-       
+
+ 
+function gallery_column($defaults){
+    $defaults['riv_post_thumbs'] = __('Zdjęcie');
+    return $defaults;
+}
+ 
+function gallery_column_content($column_name, $id){
+    if($column_name === 'riv_post_thumbs'){
+        echo   the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid' ) );
+ 
+    }
+}
