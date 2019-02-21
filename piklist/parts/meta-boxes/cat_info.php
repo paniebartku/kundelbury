@@ -17,10 +17,10 @@ piklist('field', array(
       array(
         'type' => 'text'
         ,'field' => 'race'
-        ,'label' => __('Rasa')
+        ,'label' => __('Kot w typie')
         ,'columns' => 4
         ,'attributes' => array(
-          'placeholder' => 'Rasa kota'
+          'placeholder' => 'Wpisz typ kota, np. dachowiec'
         )
       )
       ,array(
@@ -64,7 +64,7 @@ piklist('field', array(
         ,'label' => __('Wirtualny opiekun')
         ,'columns' => 5
         ,'attributes' => array(
-          'placeholder' =>'Wpisz imię i nazwisko opeikuna'
+          'placeholder' =>'Wpisz imię i nazwisko opiekuna'
         )
       )
     )

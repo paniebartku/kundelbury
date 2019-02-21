@@ -51,7 +51,7 @@ get_header();
         ?>
        
     
-          <div class="col-lg-4 col-md-3 col-sm-12 animated fadeIn dogo">
+          <div class="col-lg-6 col-md-3 col-sm-12 animated fadeIn dogo">
           <div class="">
             <div class="pindex " style="">
            
@@ -81,7 +81,7 @@ get_header();
   <div class="modal-dialog modal-lg" data-dismiss="modal">
     <div class="modal-content"  >              
       <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <button type="button" style="margin-bottom: 1rem;" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <img src="" class="imagepreview" style="width: 100%;" >
       </div> 
       <div class="modal-footer">

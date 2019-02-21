@@ -17,10 +17,10 @@ piklist('field', array(
       array(
         'type' => 'text'
         ,'field' => 'race'
-        ,'label' => __('Rasa')
+        ,'label' => __('Pies w typie')
         ,'columns' => 4
         ,'attributes' => array(
-          'placeholder' => 'Rasa psiaka'
+          'placeholder' => 'Wpisz typ psa, np. jamnik'
         )
       )
       ,array(
@@ -65,7 +65,7 @@ piklist('field', array(
         ,'label' => __('Wirtualny opiekun')
         ,'columns' => 5
         ,'attributes' => array(
-          'placeholder' =>'Wpisz imię i nazwisko opeikuna'
+          'placeholder' =>'Wpisz imię i nazwisko opiekuna'
         )
       )
     )

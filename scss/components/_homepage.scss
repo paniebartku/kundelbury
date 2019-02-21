@@ -1,29 +1,33 @@
 .home-block {
     &__parallax, &__parallax--second {
-        height: 74vh;
+       // height: 74vh;
+       height: 0;
+       padding-top: 50%;
         width: 100%;
-        background-size: initial;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: 73% 64%;
+        background-position: top center;
+        //background-position: 73% 64%;
         background-attachment: fixed;
         position: relative;
     }
     &__into-parallax{
         display: flex;
         align-items: center;
+        margin-top: -25%;
         height: 100%;
         &--white{
-            background-color:rgba(0, 0, 0,0.7);
+            background-color:rgba(0, 0, 0,0.3);
             padding: 1.0rem;
             h1{
                 line-height: 1.24;
                 color:white;
             }
-        }
+        } 
     }
     &__icons {
 
-    }
+    } 
     &__icon {
         margin-top:-5rem;
         background-color: white;
@@ -43,20 +47,98 @@
 
 @media(max-width:1366px){
     .home-block {
-        &__parallax {
-            height: 90vh;
-            background-position: 56% 40%;
+        &__parallax, &__parallax--second {
+            // height: 30rem;
+ 
+             background-size: cover;;
+           
+         }
+         &__icon {
+             img {height: 10vh;}
+         }
+    }    
+}
+
+@media(max-width:1200px){
+    .home-block {
+     
+        &__parallax{
+           // height: 30rem;
+
+            background-size: contain;
           
+        }
+        &__icon {
+            padding: 1.2rem;
+            img {height: 8vh;}
+            h3{font-size: 1.3rem;}
         }
     }    
 }
- 
+@media(max-width:767px){
+    .home-block {
+     
+        &__parallax, &__parallax--second {
+            background-attachment: initial;
+            margin-bottom: 2rem;
+            background-size: cover;
+          background-position: 0 10%;
+
+          
+        }
+
+        &__parallax--second {}
+        &__into-parallax{
+   
+            &--white{
+              
+                h1{
+                    font-size: 1.5rem;
+                }
+            } 
+        }
+        &__icon {
+            margin-top:0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            justify-content: space-between;
+            img {height: 7vh; margin-left:1.5rem;}
+            h3{margin-right:1.5rem;}
+           // h3 {margin-left:3rem;}
+            
+        }
+    
+    }    
+}
+@media(max-width:567px){
+    .home-block {
+       // &__parallax--second {display: none;}
+         
+           &__into-parallax{
+      
+         display: none;
+           }
+           &__icon {
+               margin-top:0;
+               h3{font-size:1.2rem;}
+               
+           }
+       
+       } 
+
+}
 .news {
     margin-bottom: 3rem;
     &-elem {
         margin-bottom: 2rem;
     }
+    &__header-flex{display:flex; width:100%; justify-content: space-between; margin-bottom:2rem; }
+   
 }
+
+@media(max-width:767px){.news__header-flex {margin-top:2rem;}}
+@media(max-width:567px){.news__header-flex{flex-direction:column; text-align:center;} .news__header-flex h2 {margin-bottom:1rem;}}
 
 .row__header {
     margin-top:2rem; margin-bottom: 2rem;

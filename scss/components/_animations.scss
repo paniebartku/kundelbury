@@ -1,3 +1,5 @@
+@media(min-width:767px){
+
 @for $i from 1 to 20 {
     .dogo:nth-child(#{$i}) { animation-delay: $i * 0.25s; }
   }
@@ -29,3 +31,5 @@
   }
   
   .fadeIn { animation-name: fadeIn;}
+
+}

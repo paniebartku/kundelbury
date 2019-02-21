@@ -1,6 +1,6 @@
 <?php 
 /*
-Template name: Strona z psami
+Template name: Strona z kotami
 */
 
 get_header();
@@ -39,7 +39,7 @@ get_header();
   
     <?php
     
-    $loop = new WP_Query( array( 'post_type' => 'dogs'));
+    $loop = new WP_Query( array( 'post_type' => 'cats'));
  
     if ( $loop->have_posts() ) :
         while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -71,7 +71,7 @@ get_header();
                        
 
                         <figure>
-                        <img class="img-fluid pet-gallery__photo--main" src="<?php echo $pet_image_main; ?>" alt="" />
+                        <img class="img-fluid pets-gallery__photo--main" src="<?php echo $pet_image_main; ?>" alt="" />
       <figcaption>
         <div>
           <h3><?php echo get_the_title(); ?></h3>

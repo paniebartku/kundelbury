@@ -9,12 +9,16 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 
 module.exports = {
-  entry: ['./js/medor_scripts.js', './scss/medor_scripts.scss'],
+  entry: [
+  './js/medor_scripts.js', 
+  
+  './scss/bootstrap/bootstrap.scss','./scss/medor_scripts.scss'],
   output: {
     filename: './dist/dist.min.js',
     path: path.resolve(__dirname)
     
   },
+  performance: { hints: false },
   module: {
     rules: [
       // perform js babelization on all .js files

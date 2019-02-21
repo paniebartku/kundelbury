@@ -94,10 +94,22 @@
 }
 
 
-.for-adoption {
+.for-adoption, .problems {
     &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem; margin-top: 2rem; background-color: $orange;}
     &__title {margin-bottom: 1rem; color: white;}
     &__content {margin-top:2rem;}
-    &__pets-loop {margin-top: 2rem;}
+    &__pets-loop {
+        margin-top: 1rem; 
+        &--single {margin-top:1rem;}
+        
+    }
+}
+
+.problem-info {
+    h3 {color: $orange;}
+    &__excerpt {
+        a {margin-top: 1rem;}
+    }
+    
 }
  

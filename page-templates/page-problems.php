@@ -1,18 +1,18 @@
 <?php 
 /*
-Template name: Strona z psami
+Template name: Nasze problemy
 */
 
 get_header();
 
 ?>
-<div class="for-adoption">
-<div class="container-fluid for-adoption__orange-row">
+<div class="problems">
+<div class="container-fluid problems__orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="for-adoption__title ">
+        <div class="problems__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
@@ -22,7 +22,7 @@ get_header();
     <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <div class="for-adoption__content">
+            <div class="problems__content">
         <?php
             if (have_posts()) :
             while (have_posts()) :
@@ -35,59 +35,75 @@ get_header();
         </div>
     </div>
     
-<div class="row for-adoption__pet-loop">
+
   
     <?php
     
-    $loop = new WP_Query( array( 'post_type' => 'dogs'));
+    $loop = new WP_Query( array( 'post_type' => 'problems'));
  
     if ( $loop->have_posts() ) :
-        while ( $loop->have_posts() ) : $loop->the_post(); 
-        
-        $image_ids = get_post_meta($post->ID, 'pet_image');
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div class="row problems__pets-loop">
+            <?php
+        $image_ids = get_post_meta($post->ID, 'problem_thumbnail');
         foreach ($image_ids as $image)
         {
         $myupload = get_post_meta($image);
         
-        //$thumb = '<img class="img-fluid" src="' . wp_get_attachment_url($image) . '"/>';
         $pet_image_main = wp_get_attachment_url($image);
         }
 
-        $public = get_post_meta($post->ID, 'pet_public', true);
        
       
      
         
         
         ?>
-        <?php  if ($public == false): ?>
+        
     
-          <div class="col-lg-4 col-md-3 col-sm-12 animated fadeIn dogo">
-          <div class="">
+        
+    
+      
+        
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="pindex " style="">
                 
-                 
+                 <figure>
                         <a href="<?php the_permalink(); ?>">
                        
 
-                        <figure>
+                       
                         <img class="img-fluid pet-gallery__photo--main" src="<?php echo $pet_image_main; ?>" alt="" />
-      <figcaption>
-        <div>
-          <h3><?php echo get_the_title(); ?></h3>
-        </div>
-      </figcaption>
-    </figure>
+      
+        
+   
+    
 
 
                     </a>
-                   
+                    </figure>
              
             </div>
             </div>
+
+          
+
+            <div class="col-lg-8">
+            <div class="problem-info">
+            <h3><?php echo get_the_title(); ?></h3>
+            <div class="problem-info__excerpt">
+            <?php the_excerpt();?>
+
+            <a class="btn btn__primary--right float-right" href="<?php the_permalink(); ?>" role="button">Czytaj więcej<i class="fas fa-angle-right"></i></a>
+
+            </div>
+            </div>
+            </div>
+    
+           
             </div>
 
-            <?php endif; ?>
+        
         <?php endwhile; ?>
         
         <?php
@@ -97,7 +113,8 @@ get_header();
 ?>
 
 
-</div>
+
+
 </div>
 </div>
 
