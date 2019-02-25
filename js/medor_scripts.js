@@ -20,6 +20,11 @@ $(function() {
        
     });
 });
+$(function() {
+  $(".active.nav-item a.dropdown-item").filter(function(){
+    return this.href == location.href.replace(/#.*/, "");
+  }).addClass("active");
+});
 
 (function($) {
     
