@@ -5880,17 +5880,6 @@ footer {
   cursor: pointer;
   margin-bottom: 0.4rem; }
 
-.single-block__title {
-  margin-bottom: 1rem;
-  color: white; }
-
-.single-block__content {
-  margin-top: 2rem; }
-
-.single__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
-
 .block-page {
   margin-bottom: 2rem; }
   .block-page__title {
@@ -5903,6 +5892,10 @@ footer {
     .block-page__content img {
       height: auto;
       width: 100%; }
+  .block-page__pets-loop {
+    margin-top: 1rem; }
+    .block-page__pets-loop--single {
+      margin-top: 1rem; }
 
 .problem-info h3 {
   color: #ff7701; }
@@ -5917,11 +5910,9 @@ footer {
   @media (max-width: 991px) {
     .orange-row {
       margin-top: 0; } }
-
-.for-adoption__pets-loop {
-  margin-top: 1rem; }
-  .for-adoption__pets-loop--single {
-    margin-top: 1rem; }
+  @media (max-width: 767px) {
+    .orange-row {
+      margin-top: -1rem; } }
 
 .single-pet-block__name {
   margin-bottom: 1rem; }

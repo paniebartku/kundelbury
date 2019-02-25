@@ -10,6 +10,11 @@
           height: auto; width:100%;
       }
     }
+    &__pets-loop {
+      margin-top: 1rem; 
+      &--single {margin-top:1rem;}
+      
+  }
   }
 
 
@@ -23,18 +28,13 @@
 
 
 .orange-row {padding:1.6rem 0 0; margin-top: 2rem; background-color: $orange;
-  @media(max-width:991px){margin-top: 0;}   
+  @media(max-width:991px){margin-top: 0;} 
+  @media(max-width:767px){margin-top: -1rem;}    
 }   
 
 
 
-  .for-adoption, {
-  &__pets-loop {
-      margin-top: 1rem; 
-      &--single {margin-top:1rem;}
-      
-  }
-}
+
 
 .single-pet-block{
       &__name {margin-bottom: 1rem;}

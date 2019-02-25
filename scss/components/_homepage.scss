@@ -1,13 +1,13 @@
 .home-block {
     &__parallax, &__parallax--second {
-       // height: 74vh;
+     
        height: 0;
        padding-top: 50%;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
-        //background-position: 73% 64%;
+       
         background-attachment: fixed;
         position: relative;
     }

@@ -35,7 +35,7 @@ get_header();
         </div>
     </div>
     
-<div class="row for-adoption__pet-loop">
+<div class="row block-page__pet-loop">
   
     <?php
     
