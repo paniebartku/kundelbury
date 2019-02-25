@@ -6,13 +6,13 @@ Template name: Strona z psami
 get_header();
 
 ?>
-<div class="for-adoption">
+<section class="block-page">
 <div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="for-adoption__title ">
+        <div class="block-page__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
@@ -22,7 +22,7 @@ get_header();
     <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <div class="for-adoption__content">
+            <div class="block-page__content">
         <?php
             if (have_posts()) :
             while (have_posts()) :
@@ -99,16 +99,9 @@ get_header();
 
 </div>
 </div>
-</div>
+</section>
 
-<script>
-                // $(function(){
-                //     $(".dogo").each(function(index){
-                //         $(this).attr("class", "animation " + index);
-                //     });
-                // });
 
-            </script>
 <?php
 get_footer();
 ?>

@@ -1,20 +1,20 @@
 <?php
 get_header();
 ?>
-<div class="single-block">
-<div class="container-fluid single-block__orange-row">
+<section class="block-page">
+<div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="single-block__title ">
+        <div class="block-page__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
     </div>
     </div>
     </div>
-    <div class="container single__content">
+    <div class="container block-page__content">
     <div class="row">
 
     <div class="col-lg-12">
@@ -31,7 +31,7 @@ get_header();
 
     </div>
 </div>
-</div>
+</section>
 
 <?php
 get_footer();

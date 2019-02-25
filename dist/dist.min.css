@@ -5634,14 +5634,6 @@ a {
   a:hover {
     color: #eb5d1c; }
 
-.orange-row {
-  padding: 1.6rem 0 0;
-  margin-top: 2rem;
-  background-color: #ff7701; }
-  @media (max-width: 991px) {
-    .orange-row {
-      margin-top: 0; } }
-
 ::-webkit-input-placeholder {
   color: gray; }
 
@@ -5869,33 +5861,6 @@ footer {
     right: 30px;
     bottom: 30px; } }
 
-.single-pet-block {
-  padding-top: 2.125rem; }
-  .single-pet-block__title {
-    margin-bottom: 1rem;
-    color: white; }
-  .single-pet-block__content {
-    margin-top: 2rem;
-    margin-bottom: 2rem; }
-    .single-pet-block__content .row:first-child {
-      margin-bottom: 1.5rem; }
-  .single-pet-block__name {
-    margin-bottom: 1rem; }
-  .single-pet-block h2 {
-    display: inline-block;
-    margin-bottom: 0.7rem; }
-  .single-pet-block__info .main {
-    font-size: 1.2rem;
-    font-weight: bold; }
-  .single-pet-block__info--content {
-    margin-top: 1rem; }
-  .single-pet-block__info .row {
-    margin-bottom: 1rem; }
-  .single-pet-block__guardian h2 {
-    margin-bottom: 0.5rem; }
-  .single-pet-block__guardian h3 {
-    font-style: italic; }
-
 .pets-gallery ul {
   padding: 0;
   display: grid;
@@ -5915,31 +5880,6 @@ footer {
   cursor: pointer;
   margin-bottom: 0.4rem; }
 
-.for-adoption__orange-row, .problems__orange-row {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 1.6rem;
-  margin-top: 2rem;
-  background-color: #ff7701; }
-
-.for-adoption__title, .problems__title {
-  margin-bottom: 1rem;
-  color: white; }
-
-.for-adoption__content, .problems__content {
-  margin-top: 2rem; }
-
-.for-adoption__pets-loop, .problems__pets-loop {
-  margin-top: 1rem; }
-  .for-adoption__pets-loop--single, .problems__pets-loop--single {
-    margin-top: 1rem; }
-
-.problem-info h3 {
-  color: #ff7701; }
-
-.problem-info__excerpt a {
-  margin-top: 1rem; }
-
 .single-block__title {
   margin-bottom: 1rem;
   color: white; }
@@ -5951,24 +5891,60 @@ footer {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-.page {
+.block-page {
   margin-bottom: 2rem; }
-  .page__title {
+  .block-page__title {
     margin-bottom: 1rem;
     color: white; }
-  .page__content {
+  .block-page__content {
     margin-top: 2rem; }
-    .page__content img {
+    .block-page__content .row:first-child {
+      margin-bottom: 1.5rem; }
+    .block-page__content img {
       height: auto;
       width: 100%; }
 
-.news {
-  margin-bottom: 2rem; }
-  .news__title {
-    margin-bottom: 1rem;
-    color: white; }
-  .news__content {
-    margin-top: 2rem; }
+.problem-info h3 {
+  color: #ff7701; }
+
+.problem-info__excerpt a {
+  margin-top: 1rem; }
+
+.orange-row {
+  padding: 1.6rem 0 0;
+  margin-top: 2rem;
+  background-color: #ff7701; }
+  @media (max-width: 991px) {
+    .orange-row {
+      margin-top: 0; } }
+
+.for-adoption__pets-loop {
+  margin-top: 1rem; }
+  .for-adoption__pets-loop--single {
+    margin-top: 1rem; }
+
+.single-pet-block__name {
+  margin-bottom: 1rem; }
+
+.single-pet-block h2 {
+  display: inline-block;
+  margin-bottom: 0.7rem; }
+
+.single-pet-block__info .main {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+.single-pet-block__info--content {
+  margin-top: 1rem; }
+
+.single-pet-block__info .row {
+  margin-bottom: 1rem; }
+
+.single-pet-block__guardian h2 {
+  margin-bottom: 0.5rem; }
+
+.single-pet-block__guardian h3 {
+  font-style: italic; }
 
 .home-block__parallax, .home-block__parallax--second {
   height: 0;
@@ -6090,14 +6066,6 @@ footer {
 .row__header {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-
-.contact {
-  margin-bottom: 2rem; }
-  .contact__title {
-    margin-bottom: 1rem;
-    color: white; }
-  .contact__content {
-    margin-top: 2rem; }
 
 .google-maps {
   margin-top: 2rem;

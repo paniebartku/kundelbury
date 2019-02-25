@@ -1,25 +1,4 @@
-.single-pet-block{padding-top:2.125rem;
 
-    &__title {margin-bottom: 1rem; color: white;}
-    &__content {margin-top:2rem; margin-bottom: 2rem; 
-        .row:first-child{
-        margin-bottom: 1.5rem;
-    } 
-}
-    &__name {margin-bottom: 1rem;}
-    h2{display: inline-block; margin-bottom: 0.7rem;}
-    
-    &__info {
-        .main{font-size:1.2rem; font-weight: bold;}
-        &--content {margin-top: 1rem;}
-        .row {margin-bottom: 1rem;}
-    }
-    &__guardian{
-        h2 {margin-bottom:0.5rem;}
-        h3 {font-style: italic;}
-    }
-   
-}
 
 .pets-gallery {
     ul {padding:0; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-column-gap: 5px;}
@@ -28,88 +7,7 @@
     &__photo--thumbnail {max-height: 10rem; cursor: pointer; margin-bottom:0.4rem; }
 }
 
-// @media (-webkit-min-device-pixel-ratio:0) { 
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 6.53rem;}
-//     }
-
-// }
-
-// @media(min-width:992px)and(max-width:1199px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 5.5rem;}
-//     }
-       
-// }
-
-// @media(min-width:768px)and(max-width:991px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 8.59rem;;}
-//     }
-       
-// }
-
-// @media(min-width:576px)and(max-width:767px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 6.14rem;}
-//     }
-       
-// }
-
-// @media(max-width:414px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 4.58rem;}
-//     }
-       
-// }
 
 
-// @media(max-width:375px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 4.09rem;}
-//     }
-       
-// }
 
-// @media(max-width:360px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 3.9rem;}
-//     }
-       
-// }
-
-// @media(max-width:320px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 3.4rem;}
-//     }
-       
-// }
-
-
-// @media(max-width:320px){
-//     .pets-gallery {
-//         &__photo--thumbnail {max-height: 3.2rem;}
-//     }
-       
-// }
-
-
-.for-adoption, .problems {
-    &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem; margin-top: 2rem; background-color: $orange;}
-    &__title {margin-bottom: 1rem; color: white;}
-    &__content {margin-top:2rem;}
-    &__pets-loop {
-        margin-top: 1rem; 
-        &--single {margin-top:1rem;}
-        
-    }
-}
-
-.problem-info {
-    h3 {color: $orange;}
-    &__excerpt {
-        a {margin-top: 1rem;}
-    }
-    
-}
  

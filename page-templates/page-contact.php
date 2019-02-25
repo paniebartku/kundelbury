@@ -6,13 +6,13 @@ Template name: Kontakt
 get_header();
 
 ?>
-<div class="contact">
+<section class="block-page">
 <div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="contact__title ">
+        <div class="block-page__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
@@ -22,7 +22,7 @@ get_header();
     <div class="container">
     <div class="row">
     <div class="col-lg-12">
-    <div class="contact__content">
+    <div class="block-page__content">
 <?php
     if (have_posts()) :
     while (have_posts()) :
@@ -43,7 +43,7 @@ get_header();
    </div>
     </div>
 </div>
-</div>    
+</section>    
 
 
 <?php get_footer(); ?>

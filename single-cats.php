@@ -12,20 +12,20 @@ $cats_info = unserialize($meta['cat_info'][0]);
 ?>
 
 
-
+<section class="block-page">
 <div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="single-pet-block__title ">
+        <div class="block-page__title ">
     <h1><?php echo the_title();?></h1>
     </div>
     </div>
     </div>
     </div>
     </div>
-    <div class="container single-pet-block__content">
+    <div class="container block-page__content">
       <div class="row">
         <div class="col-sm-12">
         <a class="btn btn__primary--left" href="#" role="button"><i class="fas fa-angle-left"></i>Powrót do galerii kotów</a>
@@ -124,7 +124,7 @@ endif;
   </div>
       
 
-
+  </section>
 
 
 

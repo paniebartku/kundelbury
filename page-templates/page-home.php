@@ -70,7 +70,7 @@ get_header();
         <h2>Aktualności</h2>
    
      
-        <a class="btn btn__primary--right" href="#" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
+        <a class="btn btn__primary--right" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
    
       </div>
       </div>
@@ -157,16 +157,6 @@ get_header();
   </div>
 
   </div>
-<script>
-// $("document").ready(function(){
 
-//     $(".icons__first").mouseenter(function(){
-//         $(".icons__first img").animate(5000, 'linear').attr('src',"<?php echo get_template_directory_uri(); ?>/images/icons/2_white.png");
-//     });
-//     $(".icons").mouseleave(function(){
-//         $(".icons__first img").animate("slow").attr('src',"<?php echo get_template_directory_uri(); ?>/images/icons/2.png");
-//     });
-// });
-</script>
 
 <?php get_footer(); ?>

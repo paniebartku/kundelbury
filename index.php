@@ -2,20 +2,20 @@
 
 get_header();
 ?>
-<section class="news">
+<section class="block-page">
 <div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
     <div class="col-sm-12">
-        <div class="news__title ">
+        <div class="block-page__title ">
     <h1>Aktualności</h1>
     </div>
     </div>
     </div>
     </div>
     </div>
-<div class="container news__content">
+<div class="container block-page__content">
 
 
   <div class="row">
