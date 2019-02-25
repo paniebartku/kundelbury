@@ -1937,12 +1937,6 @@ textarea.form-control {
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
-  .dropdown-item:first-child {
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px); }
-  .dropdown-item:last-child {
-    border-bottom-right-radius: calc(0.25rem - 1px);
-    border-bottom-left-radius: calc(0.25rem - 1px); }
   .dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
     text-decoration: none;
@@ -5732,7 +5726,7 @@ li.nav-item.active a.nav-link {
     transition: all 0.3s ease; }
   .navbar-text a {
     display: block; }
-    .navbar-text a:hover {
+    .navbar-text a:hover, .navbar-text a:active {
       color: white; }
     .navbar-text a i {
       padding-top: 0.5rem;
@@ -5967,6 +5961,14 @@ footer {
     .page__content img {
       height: auto;
       width: 100%; }
+
+.news {
+  margin-bottom: 2rem; }
+  .news__title {
+    margin-bottom: 1rem;
+    color: white; }
+  .news__content {
+    margin-top: 2rem; }
 
 .home-block__parallax, .home-block__parallax--second {
   height: 0;
