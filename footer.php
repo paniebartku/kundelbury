@@ -44,8 +44,9 @@
           
         </div>
     </div>
+   
 </footer>
-
+<a href="#0" class="cd-top js-cd-top">Top</a>
 <?php wp_footer(); ?> 
 </body>
 

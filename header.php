@@ -9,8 +9,9 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<header>
 
-<div class="container-fluid">
+
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
 
@@ -57,5 +58,5 @@
 </div>
 </nav>
 
-</div>
 
+</header>

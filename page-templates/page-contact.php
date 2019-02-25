@@ -7,7 +7,7 @@ get_header();
 
 ?>
 <div class="contact">
-<div class="container-fluid contact__orange-row">
+<div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 

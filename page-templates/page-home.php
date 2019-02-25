@@ -4,7 +4,7 @@
 Template name: Strona główna
 */
 
-require get_template_directory() . '/views/homepage.php';
+require get_template_directory() . '/variables/homepage.php';
 
 
 get_header();
@@ -64,6 +64,7 @@ get_header();
   <div class="container">
 
     <div class="row">
+      <div class="col-sm-12">
       <div class="news__header-flex">
     
         <h2>Aktualności</h2>
@@ -72,10 +73,8 @@ get_header();
         <a class="btn btn__primary--right" href="#" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
    
       </div>
-      <style>
-
-      </style>
-
+      </div>
+    
     </div>
 
 
@@ -88,7 +87,7 @@ get_header();
      while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
     <div class="col-lg-4 col-md-6 news-col">
-   <?php require get_template_directory() . '/views/posts.php';?>
+   <?php require get_template_directory() . '/variables/posts.php';?>
    <div class="news-elem">
    <div class="news-elem__image">
    <a href=" <?php echo get_permalink(); ?>">

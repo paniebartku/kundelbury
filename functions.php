@@ -20,6 +20,7 @@ class Functions {
         register_nav_menu('primary', 'Główne menu');
         add_theme_support( 'custom-logo');
         add_theme_support( 'post-thumbnails' );
+        add_image_size( 'medor-size', 600, 400, array( 'left', 'top' ) );
     }
 
     public function add_actions() {

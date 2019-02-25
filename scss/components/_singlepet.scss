@@ -1,10 +1,10 @@
 .single-pet-block{padding-top:2.125rem;
-    &__orange-row {padding-left:0; padding-right:0; padding-top:1.6rem;margin-top: 2rem; background-color: $orange;}
+
     &__title {margin-bottom: 1rem; color: white;}
     &__content {margin-top:2rem; margin-bottom: 2rem; 
         .row:first-child{
         margin-bottom: 1.5rem;
-    }
+    } 
 }
     &__name {margin-bottom: 1rem;}
     h2{display: inline-block; margin-bottom: 0.7rem;}
@@ -22,76 +22,76 @@
 }
 
 .pets-gallery {
-    ul {padding:0;}
+    ul {padding:0; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-column-gap: 5px;}
     li {display: inline; margin-right: 0;}
     &__photo--main {width:100%; margin-bottom: 0.4rem;}
-    &__photo--thumbnail {max-height: 6.38rem; cursor: pointer; margin-bottom:0.4rem; }
+    &__photo--thumbnail {max-height: 10rem; cursor: pointer; margin-bottom:0.4rem; }
 }
 
-@media (-webkit-min-device-pixel-ratio:0) { 
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 6.53rem;}
-    }
+// @media (-webkit-min-device-pixel-ratio:0) { 
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 6.53rem;}
+//     }
 
-}
+// }
 
-@media(min-width:992px)and(max-width:1199px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 5.4rem;}
-    }
+// @media(min-width:992px)and(max-width:1199px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 5.5rem;}
+//     }
        
-}
+// }
 
-@media(min-width:768px)and(max-width:991px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 8.39rem;}
-    }
+// @media(min-width:768px)and(max-width:991px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 8.59rem;;}
+//     }
        
-}
+// }
 
-@media(min-width:576px)and(max-width:767px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 6.14rem;}
-    }
+// @media(min-width:576px)and(max-width:767px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 6.14rem;}
+//     }
        
-}
+// }
 
-@media(max-width:414px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 4.58rem;}
-    }
+// @media(max-width:414px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 4.58rem;}
+//     }
        
-}
+// }
 
 
-@media(max-width:375px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 4.09rem;}
-    }
+// @media(max-width:375px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 4.09rem;}
+//     }
        
-}
+// }
 
-@media(max-width:360px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 3.9rem;}
-    }
+// @media(max-width:360px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 3.9rem;}
+//     }
        
-}
+// }
 
-@media(max-width:320px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 3.4rem;}
-    }
+// @media(max-width:320px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 3.4rem;}
+//     }
        
-}
+// }
 
 
-@media(max-width:320px){
-    .pets-gallery {
-        &__photo--thumbnail {max-height: 3.2rem;}
-    }
+// @media(max-width:320px){
+//     .pets-gallery {
+//         &__photo--thumbnail {max-height: 3.2rem;}
+//     }
        
-}
+// }
 
 
 .for-adoption, .problems {

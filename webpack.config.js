@@ -18,6 +18,7 @@ module.exports = {
     path: path.resolve(__dirname)
     
   },
+  devtool: "source-map",
   performance: { hints: false },
   module: {
     rules: [
@@ -38,7 +39,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/images/[name].[ext]',
+              name: '../assets/images/[name].[ext]',
             },
           },
         ]
@@ -50,11 +51,12 @@ module.exports = {
         use: [
           
           MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: {} },
+          { loader: "css-loader", options: {sourceMap: true} },
           {
             loader: "postcss-loader",
             options: {
               ident: 'postcss',
+              sourceMap: true,
               plugins: [
                 require('autoprefixer')({
                   'browsers': ['> 1%', 'last 2 versions']
@@ -62,7 +64,7 @@ module.exports = {
               ]
             }
           },
-          { loader: "sass-loader", options: {} },
+          { loader: "sass-loader", options: {sourceMap: true} },
         ]
       },
       

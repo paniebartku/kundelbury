@@ -1,6 +1,6 @@
 <?php
 
-require get_template_directory() . '/views/pets.php';
+require get_template_directory() . '/variables/pets.php';
 get_header();
 
 // Grab all of our custom post types
@@ -13,7 +13,7 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 
 
 
-<div class="container-fluid single-pet-block__orange-row">
+<div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
@@ -21,7 +21,7 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
         <div class="single-pet-block__title ">
     <h1><?php echo the_title();?></h1>
     </div>
-    </div>
+    </div> 
     </div>
     </div>
     </div>

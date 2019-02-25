@@ -118,14 +118,7 @@ get_header();
 </div>
 </div>
 
-<script>
-                // $(function(){
-                //     $(".dogo").each(function(index){
-                //         $(this).attr("class", "animation " + index);
-                //     });
-                // });
 
-            </script>
 <?php
 get_footer();
 ?>

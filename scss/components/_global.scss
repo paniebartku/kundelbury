@@ -16,6 +16,12 @@ a {color: $orange;
 &:hover {color: $orange_deep;}
 }
 
+.orange-row {padding:1.6rem 0 0; margin-top: 2rem; background-color: $orange;
+    @media(max-width:991px){margin-top: 0;}   
+
+}   
+
+
 
 ::placeholder {
     color: gray;

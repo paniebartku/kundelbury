@@ -7,7 +7,7 @@ get_header();
 
 ?>
 <div class="for-adoption">
-<div class="container-fluid for-adoption__orange-row">
+<div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
@@ -101,14 +101,7 @@ get_header();
 </div>
 </div>
 
-<script>
-                // $(function(){
-                //     $(".dogo").each(function(index){
-                //         $(this).attr("class", "animation " + index);
-                //     });
-                // });
 
-            </script>
 <?php
 get_footer();
 ?>

@@ -25,9 +25,7 @@
             }
         } 
     }
-    &__icons {
-
-    } 
+ 
     &__icon {
         margin-top:-5rem;
         background-color: white;
@@ -48,9 +46,7 @@
 @media(max-width:1366px){
     .home-block {
         &__parallax, &__parallax--second {
-            // height: 30rem;
- 
-             background-size: cover;;
+            background-size: cover;;
            
          }
          &__icon {
@@ -63,9 +59,7 @@
     .home-block {
      
         &__parallax{
-           // height: 30rem;
-
-            background-size: contain;
+           background-size: cover;
           
         }
         &__icon {
@@ -87,7 +81,7 @@
           
         }
 
-        &__parallax--second {}
+     
         &__into-parallax{
    
             &--white{
@@ -105,7 +99,7 @@
             justify-content: space-between;
             img {height: 7vh; margin-left:1.5rem;}
             h3{margin-right:1.5rem;}
-           // h3 {margin-left:3rem;}
+        
             
         }
     
@@ -113,7 +107,7 @@
 }
 @media(max-width:567px){
     .home-block {
-       // &__parallax--second {display: none;}
+
          
            &__into-parallax{
       

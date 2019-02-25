@@ -4,10 +4,6 @@
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
     text-align: center;
     letter-spacing: 1px;
@@ -28,8 +24,8 @@
          }
      }
     &:hover {
-        box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+        background-color: $orange_deep;
         color:white;
     }
    
-}
+} 

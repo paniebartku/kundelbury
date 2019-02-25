@@ -14,16 +14,15 @@
     .navbar-brand {
       margin-left:2rem;
       margin-right:2rem;
+      @media(max-width:575px){
+        margin-left:0;
+      }
     }
   }
+ 
+ 
+ 
 
-  @media(max-width:575px){
-    .navbar{
-          .navbar-brand {
-            margin-left:0;
-          }
-    }
-  }
   .scrolled{
     padding:0.5rem;
     transition: 0.3s;

@@ -7,7 +7,7 @@ get_header();
 
 ?>
 <div class="for-adoption">
-<div class="container-fluid for-adoption__orange-row">
+<div class="container-fluid orange-row">
 <div class="container">
     <div class="row">
 
@@ -38,39 +38,24 @@ get_header();
     <?php
     
     $loop = new WP_Query( array( 'post_type' => 'gallery'));
- 
     if ( $loop->have_posts() ) :
         while ( $loop->have_posts() ) : $loop->the_post(); 
-        
- 
-       
-      
-     
-        
-        
-        ?>
+    ?>
        
     
           <div class="col-lg-6 col-md-3 col-sm-12 animated fadeIn dogo">
-          <div class="">
-            <div class="pindex " style="">
-           
-
-                 
-                        <a class="pop" href="#">
-                       
-
-                        <figure>
-                        <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>      
-                        <figcaption>
-        <div>
-          <h3><?php echo get_the_title(); ?></h3>
-        </div>
-      </figcaption>
-    </figure>
-
-
-                    </a>
+          <div>
+            <div class="pindex">
+              <a class="pop" href="#">
+                 <figure>
+                    <?php the_post_thumbnail( 'medor-size', array( 'class' => 'img-fluid' ) ); ?>      
+                 <figcaption>
+            <div>
+                <h3><?php echo get_the_title(); ?></h3>
+                </div>
+                 </figcaption>
+                  </figure>
+                     </a>
                    
              
             </div>
@@ -106,15 +91,7 @@ get_header();
 
 </div>
 
-<script>
 
-$(function() {
-            $('.pop').on('click', function() {
-                $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-                $('#imagemodal').modal('show');   
-            });     
-    });
-</script>
   
           
     </div>
@@ -124,7 +101,6 @@ $(function() {
 </div>
 
 
-            </script>
 <?php
 get_footer();
 ?>
