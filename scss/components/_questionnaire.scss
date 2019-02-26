@@ -1,0 +1,12 @@
+.wpcf7-form {
+    p {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+        @media(max-width:767px){ grid-template-columns:1fr;}
+        .wpcf7-submit {width: 30%;}
+        @media(max-width:567px){label{width:65%;}}
+       
+    }
+    @media(max-width:567px){input, textarea{width:100%;}}
+} 

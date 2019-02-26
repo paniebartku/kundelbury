@@ -6071,5 +6071,22 @@ footer {
     width: 100% !important;
     height: 100% !important; }
 
+.wpcf7-form p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem; }
+  @media (max-width: 767px) {
+    .wpcf7-form p {
+      grid-template-columns: 1fr; } }
+  .wpcf7-form p .wpcf7-submit {
+    width: 30%; }
+  @media (max-width: 567px) {
+    .wpcf7-form p label {
+      width: 65%; } }
+
+@media (max-width: 567px) {
+  .wpcf7-form input, .wpcf7-form textarea {
+    width: 100%; } }
+
 
 /*# sourceMappingURL=dist.min.css.map*/
