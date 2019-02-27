@@ -33,6 +33,7 @@
         text-align: center;
         color:$orange;
         margin-bottom: 6rem;
+            h4{margin-top:0.5rem;}
         &:hover{
             background-color:$orange;
             color:white;
@@ -65,7 +66,7 @@
         &__icon {
             padding: 1.2rem;
             img {height: 8vh;}
-            h3{font-size: 1.3rem;}
+          
         }
     }    
 }
@@ -98,7 +99,7 @@
             margin-bottom: 1rem;
             justify-content: space-between;
             img {height: 7vh; margin-left:1.5rem;}
-            h3{margin-right:1.5rem;}
+            h4{margin-right:1.5rem;}
         
             
         }
@@ -115,7 +116,7 @@
            }
            &__icon {
                margin-top:0;
-               h3{font-size:1.2rem;}
+               h4{margin-top:1rem}
                
            }
        

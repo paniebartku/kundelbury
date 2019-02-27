@@ -1,10 +1,8 @@
 @mixin transition {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .navbar{
-
     padding: 1rem;
     text-align: center;
     color: black;
@@ -17,32 +15,27 @@
       @media(max-width:575px){
         margin-left:0;
       }
-    }
   }
+}
  
- 
- 
-
-  .scrolled{
+.scrolled{
     padding:0.5rem;
     transition: 0.3s;
     .navbar-brand {
       img {
         @include transition;
-        -webkit-transform:scale(0.7);
          transform:scale(0.7);
       }
     }
   }
-  .scrolledAgain {
-    .navbar-brand {
-      img {
-        -webkit-transform:scale(1.0);
+.scrolledAgain {
+  .navbar-brand {
+    img {
          transform:scale(1.0);
          @include transition;
-      }
     }
   }
+}
 
 .navbar-nav {
   .active {background: $orange; color:white!important;}
@@ -58,7 +51,6 @@
   }
 }
 li.nav-item.active a.nav-link {color:white!important;}
-
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: white;

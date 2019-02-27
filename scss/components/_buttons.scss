@@ -12,20 +12,15 @@
     font-family: "Raleway";
     padding: 0.5rem 1rem;
     &__primary {
-       
- 
          &--right{
-            
-         i {margin-left: 0.4rem;}
+            i {margin-left: 0.4rem;}
          } 
          &--left{
-           
-         i {margin-right: 0.4rem;}
+            i {margin-right: 0.4rem;}
          }
      }
     &:hover {
         background-color: $orange_deep;
         color:white;
-    }
-   
+    }  
 } 

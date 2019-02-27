@@ -47,7 +47,6 @@ class Functions {
     }
 
     public function load_scripts_and_styles() {
-        //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/scss/bootstrap/bootstrap.css', array(), '4.2.1', 'all');
         wp_enqueue_style('medor', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.0.2', 'all');
         wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', false);
         wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true);
@@ -171,8 +170,8 @@ class Functions {
             'description' => __( 'Pierwszy sidebar'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="widgettitle">',
-            'after_title'   => '</h4>',
+            'before_title'  => '<h3 class="widgettitle">',
+            'after_title'   => '</h3>',
             ) );
         register_sidebar( array(
             'name' => __( 'Footer sidebar 2'),
@@ -180,8 +179,8 @@ class Functions {
             'description' => __( 'Drugi sidebar'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="widgettitle">',
-            'after_title'   => '</h4>',
+            'before_title'  => '<h3 class="widgettitle">',
+            'after_title'   => '</h3>',
             ) );
         register_sidebar( array(
             'name' => __( 'Trzeci sidebar 3'),
@@ -189,8 +188,8 @@ class Functions {
             'description' => __( 'Pierwszy sidebar'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="widgettitle">',
-            'after_title'   => '</h4>',
+            'before_title'  => '<h3 class="widgettitle">',
+            'after_title'   => '</h3>',
             ) );
         register_sidebar( array(
             'name' => __( 'Footer sidebar 4'),
@@ -198,8 +197,8 @@ class Functions {
             'description' => __( 'Czwarty sidebar'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="widgettitle">',
-            'after_title'   => '</h4>',
+            'before_title'  => '<h3 class="widgettitle">',
+            'after_title'   => '</h3>',
             ) );
                     
     }   
@@ -209,12 +208,9 @@ class Functions {
         $pages[] = array(
          'page_title' => __('Ustawienia motywu')
          ,'menu_title' => __('Settings', 'piklist')
-        // ,'sub_menu' => 'themes.php' //Under Appearance menu
          ,'capability' => 'manage_options'
          ,'menu_slug' => 'custom_settings'
          ,'setting' => 'my_theme_settings'
-         // ,'menu_icon' => plugins_url('piklist/parts/img/piklist-icon.png')
-         // ,'page_icon' => plugins_url('piklist/parts/img/piklist-page-icon-32.png')
          ,'single_line' => true
          ,'default_tab' => 'Basic'
          ,'save_text' => 'Zapisz ustawienia'

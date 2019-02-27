@@ -33,7 +33,7 @@ get_header();
                     }
                 ?>
                 <a href="#" class="pop">
-                    <img class="img-fluid pet-gallery__photo--main" src="<?php echo $problem_image; ?>" alt="" />
+                    <img class="img-fluid block-gallery__photo--main" src="<?php echo $problem_image; ?>" alt="" />
                 </a>
                 <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" data-dismiss="modal">
