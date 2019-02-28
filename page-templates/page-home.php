@@ -41,7 +41,7 @@ get_header();
       <div class="col-lg-4 col-md-4  icons">
         <a href="<?php echo $icon2_url; ?>"/>
           <div class="home-block__icon shadow-sm">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/rules.png"/>
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/cats.png"/>
             <h4><?php echo $icon2; ?></h4>
           </div>
         </a>
@@ -95,7 +95,7 @@ get_header();
   </div>
 
   <div class="home-block__parallax--second" style="background-image: url(<?php echo $parallax_second; ?>); "></div>
-  
+
     <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-4 home-block__icons icons__first">
