@@ -1,6 +1,6 @@
 #Page for dogs.
 
-Wodrpress theme.
+#Wodrpress theme.
 Coded in the wordpress version 5.0.3
 
 required plugins:
