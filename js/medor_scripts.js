@@ -54,12 +54,6 @@ $(function() {
             el.addClass("animated fadeIn dogo");
           } 
         });
-
-      
-      
-    
-   
-      
       });
 
       $(function() {
@@ -67,7 +61,7 @@ $(function() {
             $('.imagepreview').attr('src', $(this).find('img').attr('src'));
             $('#imagemodal').modal('show');   
         });     
-});
+      });
       
 
       (function(){

@@ -30,9 +30,9 @@ get_header();
                         </figure>
                     </a>
                     </div>
-                <div class="news-elem__title">
-                <a href=" <?php echo get_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
-                </div>
+                    <div class="news-elem__title">
+                        <a href=" <?php echo get_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
+                    </div>
                 </div>
             </div>
         <?php 

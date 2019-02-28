@@ -4,8 +4,6 @@ $image_ids = get_post_meta($post->ID, 'parallax');
 foreach ($image_ids as $image)
 {
 $myupload = get_post_meta($image);
-
-//$thumb = '<img class="img-fluid" src="' . wp_get_attachment_url($image) . '"/>';
 $parallax = wp_get_attachment_url($image);
 }
 
@@ -22,8 +20,6 @@ $image_ids = get_post_meta($post->ID, 'parallax_second');
 foreach ($image_ids as $image)
 {
 $myupload = get_post_meta($image);
-
-//$thumb = '<img class="img-fluid" src="' . wp_get_attachment_url($image) . '"/>';
 $parallax_second = wp_get_attachment_url($image);
 }
 

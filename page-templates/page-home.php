@@ -12,7 +12,7 @@ get_header();
 ?>
 
 
-<div class="home-block">
+<section class="home-block">
 
   <div class="home-block__parallax" style="background-image: url(<?php echo $parallax; ?>); ">
     <div class="home-block__into-parallax">
@@ -25,13 +25,10 @@ get_header();
            </div>
         </div>
       </div>
-</div>
+    </div>
+  </div>
 
-
-
-</div>
-<div class="container">
-
+  <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-4 home-block__icons icons__first">
         <a href="<?php echo $icon1_url; ?>"/>
@@ -58,76 +55,48 @@ get_header();
         </a>
       </div>
     </div>
-
   </div>
-  <section class="news">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-sm-12">
-      <div class="news__header-flex">
-    
-        <h2>Aktualności</h2>
-   
-     
-        <a class="btn btn__primary--right" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
-   
+  <div class="news">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="news__header-flex">
+            <h2>Aktualności</h2>
+            <a class="btn btn__primary--right" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" role="button">Zobacz wszystkie<i class="fas fa-angle-right"></i></a>
+          </div>
+        </div>   
       </div>
-      </div>
-    
-    </div>
-
-
-    <div class="row">
-
-
-     <?php
-     $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => '6' ) );
-     if ( $loop->have_posts() ) :
-     while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-    <div class="col-lg-4 col-md-6 news-col">
-   <?php require get_template_directory() . '/variables/posts.php';?>
-   <div class="news-elem">
-   <div class="news-elem__image">
-   <a href=" <?php echo get_permalink(); ?>">
-    <figure>
-      <img class="img-fluid" src="<?php echo $post_thumb; ?>"/>
-      
-          
-        
-    </figure>
-    </a>
-    </div>
-    <div class="news-elem__title">
-    <a href=" <?php echo get_permalink(); ?>"><h4><?php echo get_the_title(); ?></h4></a>
-     </div>
-     </div>
-
-
-
-
-
-      </div>
-                 <?php endwhile;
-
-             endif;
-             wp_reset_postdata();
-          ?>
-
-
+      <div class="row">
+      <?php
+        $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => '6' ) );
+        if ( $loop->have_posts() ) :
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <div class="col-lg-4 col-md-6 news-col">
+      <?php require get_template_directory() . '/variables/posts.php';?>
+        <div class="news-elem">
+          <div class="news-elem__image">
+            <a href=" <?php echo get_permalink(); ?>">
+              <figure>
+                <img class="img-fluid" src="<?php echo $post_thumb; ?>"/>
+              </figure>
+            </a>
+          </div>
+          <div class="news-elem__title">
+            <a href=" <?php echo get_permalink(); ?>"><h4><?php echo get_the_title(); ?></h4></a>
+          </div>
         </div>
       </div>
-      </section>
-
-      <div class="home-block__parallax--second" style="background-image: url(<?php echo $parallax_second; ?>); ">
-
-
-
-
+        <?php endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
     </div>
-    <div class="container">
+  </div>
 
+  <div class="home-block__parallax--second" style="background-image: url(<?php echo $parallax_second; ?>); "></div>
+  
+    <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-4 home-block__icons icons__first">
           <a href="<?php echo $icon4_url; ?>"/>
@@ -154,15 +123,9 @@ get_header();
             </a>
           </div>
         </div>
+      </div>  
+    </section>
 
-      </div>
-
-      
-    </div>
-  
-  </div>
-
-  </div>
 
 
 <?php get_footer(); ?>

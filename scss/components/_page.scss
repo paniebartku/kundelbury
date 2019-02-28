@@ -31,10 +31,6 @@
   @media(max-width:767px){margin-top: -1rem;}    
 }   
 
-
-
-
-
 .block-single-pet{
       &__name {margin-bottom: 1rem;}
       h2{display: inline-block; margin-bottom: 0.7rem;}
@@ -45,6 +41,7 @@
           .row {margin-bottom: 1rem;}
       }
       &__guardian{
+          margin-bottom: 1rem;
           h2 {margin-bottom:0.5rem;}
           h3 {font-style: italic;}
       }
