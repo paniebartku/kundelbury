@@ -33,7 +33,7 @@ get_header();
       <div class="col-lg-4 col-md-4 home-block__icons icons__first">
         <a href="<?php echo $icon1_url; ?>"/>
           <div class="home-block__icon shadow-sm">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/pets.png"/>
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/dogs.png"/>
             <h4><?php echo $icon1; ?></h4>
           </div>
         </a>
@@ -41,7 +41,7 @@ get_header();
       <div class="col-lg-4 col-md-4  icons">
         <a href="<?php echo $icon2_url; ?>"/>
           <div class="home-block__icon shadow-sm">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/cats.png"/>
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/cats.png"/>
             <h4><?php echo $icon2; ?></h4>
           </div>
         </a>
@@ -49,7 +49,7 @@ get_header();
       <div class="col-lg-4 col-md-4  icons">
        <a href="<?php echo $icon3_url; ?>"/>
         <div class="home-block__icon shadow-sm">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/hands.png"/>
+          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/hands.png"/>
           <h4><?php echo $icon3; ?></h4>
         </div>
         </a>
@@ -101,7 +101,7 @@ get_header();
           <div class="col-lg-4 col-md-4 home-block__icons icons__first">
           <a href="<?php echo $icon4_url; ?>"/>
             <div class="home-block__icon shadow-sm">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/help.png"/>
+              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/help.png"/>
               <h4><?php echo $icon4; ?></h4>
             </div>
             </a>
@@ -109,7 +109,7 @@ get_header();
           <div class="col-lg-4 col-md-4  icons">
           <a href="<?php echo $icon5_url; ?>"/>
             <div class="home-block__icon shadow-sm">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/hotel.png"/>
+              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/hotel.png"/>
               <h4><?php echo $icon5; ?></h4>
             </div>
             </a>
@@ -117,7 +117,7 @@ get_header();
           <div class="col-lg-4 col-md-4 icons">
           <a href="<?php echo $icon6_url; ?>"/>
             <div class="home-block__icon shadow-sm">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/icons/law.png"/>
+              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/law.png"/>
               <h4><?php echo $icon6; ?></h4>
             </div>
             </a>

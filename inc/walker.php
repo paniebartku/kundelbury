@@ -139,12 +139,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// Set title from item to the $atts array - if title is empty then
 			// default to item title.
 
-			//remove title tooltip
-			// if ( empty( $item->attr_title ) ) {
-			// 	$atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
-			// } else {
-			// 	$atts['title'] = $item->attr_title;
-			// }
 
 			
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
