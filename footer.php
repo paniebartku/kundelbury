@@ -30,7 +30,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="https://www.linkedin.com/in/bartlomiej-wilczek" target="_blank">Author</a>
+                    <a href="https://www.linkedin.com/in/b-wilczek" target="_blank">Author</a>
                 </div>
             </div>
         </div>
