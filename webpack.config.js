@@ -74,13 +74,14 @@ module.exports = {
     // extract css into dedicated file
     new MiniCssExtractPlugin({
       filename: './dist/dist.min.css',
-      publicPath: '../',
+      publicPath: '../../',
     })
   ],
   optimization: {
     minimizer: [
       // enable the js minification plugin
       new UglifyJSPlugin({
+        test: /\.js(\?.*)?$/i,
         cache: true,
         parallel: true
       }),
