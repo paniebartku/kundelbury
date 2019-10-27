@@ -1,8 +1,5 @@
 <?php
 
-/*
-Template name: Kontakt
-*/
 get_header();
 
 ?>

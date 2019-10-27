@@ -15,8 +15,8 @@ $(function() {
 });
 
 $(function() {
-    $(".pets-gallery li img").click(function(){
-        $('.pets-gallery__photo--main').attr('src',$(this).attr('src').replace());
+    $(".block-gallery li img").click(function(){
+        $('.block-gallery__photo--main').attr('src',$(this).attr('src').replace());
        
     });
 });
