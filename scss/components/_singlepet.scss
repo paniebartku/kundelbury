@@ -1,6 +1,6 @@
 
 
-.block-gallery {
+.pets-gallery {
     ul {padding:0; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-column-gap: 5px;}
     li {display: inline; margin-right: 0;}
     &__photo--main {width:100%; margin-bottom: 0.4rem;}

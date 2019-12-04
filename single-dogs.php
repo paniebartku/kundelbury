@@ -111,4 +111,10 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
 </section>
 
 
+
+
+
+
+
+
 <?php get_footer();?>

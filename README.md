@@ -1,7 +1,6 @@
 #Page for dogs.
 
-#Wodrpress theme.
-Coded in the wordpress version 5.0.3
+Wodrpress theme
 
 required plugins:
 - Piklist
@@ -10,3 +9,4 @@ required plugins:
 
 additionally:
 - Send PDF for Contact Form 7
+	
