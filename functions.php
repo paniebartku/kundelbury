@@ -22,7 +22,7 @@ class Functions {
     }
 
     public function add_actions() {
-        add_action( 'wp_enqueue_scripts', array($this, 'include_custom_jquery'));
+        //add_action( 'wp_enqueue_scripts', array($this, 'include_custom_jquery'));
         add_action( 'wp_enqueue_scripts', array($this, 'load_scripts_and_styles') );
         add_action( 'init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
@@ -41,15 +41,15 @@ class Functions {
         add_filter( 'manage_gallery_posts_columns', array($this, 'gallery_column'), 10);
     }
 
-    public function include_custom_jquery() {
-        wp_deregister_script('jquery');
-    }
+    // public function include_custom_jquery() {
+    //     wp_deregister_script('jquery');
+    // }
 
     public function load_scripts_and_styles() {
-        wp_enqueue_style('medor', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.0.2', 'all');
-        wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', true);
-        wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true);
-        wp_enqueue_script('medorjs', get_template_directory_uri() . '/dist/dist.min.js', array(), '1.0.1', true);
+        wp_enqueue_style('kundelcss', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.0.2', 'all');
+       // wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', true);
+        //wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true);
+        wp_enqueue_script('kundeljs', get_template_directory_uri() . '/dist/dist.min.js', array('jquery'), '1.0.1', true);
     }
 
     public function removes(){
@@ -86,17 +86,17 @@ class Functions {
         register_post_type('cats',
           array(
             'labels' => array(
-              'name' => __( 'Koty' ),
-              'singular_name' => __( 'Kot' ),
-              'add_new' => 'Dodaj Kota',
-              'all_items' => 'Wszystkie Koty',
-              'add_new_item' => 'Dodaj Kota',
-              'edit_item' => 'Edytuj Kota',
-              'new_item' => 'Nowy Kot',
-              'view_item' => 'Zobacz Kota',
-              'search_item' => 'Szukaj Kota',
-              'not_found' => 'Kota nie znaleziono',
-              'not_found_in_trash' => 'Nie ma Kota w koszu',
+              'name' => __( 'Inne Zwierzęta' ),
+              'singular_name' => __( 'Zwierzę' ),
+              'add_new' => 'Dodaj Zwierzę',
+              'all_items' => 'Wszystkie Zwierzęta',
+              'add_new_item' => 'Dodaj Zwierzę',
+              'edit_item' => 'Edytuj Zwierzę',
+              'new_item' => 'Nowe Zwierzę',
+              'view_item' => 'Zobacz Zwierzę',
+              'search_item' => 'Szukaj Zwierzęcia',
+              'not_found' => 'Zwierzęcia nie znaleziono',
+              'not_found_in_trash' => 'Nie ma Zwierzęcia w koszu',
             ),
             'public' => true,
             'has_archive' => true,
@@ -110,17 +110,17 @@ class Functions {
         register_post_type('problems',
           array(
             'labels' => array(
-              'name' => __( 'Nasze problemy' ),
-              'singular_name' => __( 'Problem' ),
-              'add_new' => 'Dodaj Problem',
-              'all_items' => 'Wszystkie Problemy',
-              'add_new_item' => 'Dodaj Problem',
-              'edit_item' => 'Edytuj Problem',
-              'new_item' => 'Nowy Problem',
-              'view_item' => 'Zobacz Problem',
-              'search_item' => 'Szukaj Problemu',
-              'not_found' => 'Problemu nie znaleziono',
-              'not_found_in_trash' => 'Nie ma Problemu w koszu',
+              'name' => __( 'Szczęśliwe zakończenia' ),
+              'singular_name' => __( 'Zakończenie' ),
+              'add_new' => 'Dodaj Zakończenie',
+              'all_items' => 'Wszystkie Zakończenia',
+              'add_new_item' => 'Dodaj Zakończenie',
+              'edit_item' => 'Edytuj Zakończenie',
+              'new_item' => 'Nowy Zakończenie',
+              'view_item' => 'Zobacz Zakończenie',
+              'search_item' => 'Szukaj Zakończenia',
+              'not_found' => 'Zakończenia nie znaleziono',
+              'not_found_in_trash' => 'Nie ma Zakończenia w koszu',
             ),
             'public' => true,
             'has_archive' => true,

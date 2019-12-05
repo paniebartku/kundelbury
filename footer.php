@@ -8,7 +8,7 @@
                   }else {echo '<p></p>';}?>
                 </div>
                 <div class="col-lg-3 col-md-12 text-center">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/images/dog_footer.png">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/src/img/dog_footer.png">
                 </div>
             </div>
             <div class="row">

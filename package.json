@@ -1,17 +1,19 @@
 {
-  "name": "medor",
+  "name": "kundelbury",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "autoprefixer": "^9.4.7",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^2.1.0",
     "exports-loader": "^0.7.0",
     "file-loader": "^3.0.1",
