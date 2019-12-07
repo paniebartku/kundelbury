@@ -32,6 +32,9 @@ class Functions {
         add_action( 'widgets_init', array($this,'footer_sidebars')  );
         add_action( 'pre_get_posts', array($this, 'parse_request') );
         add_action( 'manage_gallery_posts_custom_column', array($this, 'gallery_column_content'), 10, 2);
+        add_action( 'init', array($this, 'create_dogs_tax' ) );
+        add_action('restrict_manage_posts', array($this, 'filter_post_type_by_taxonomy') );
+
     }
 
     public function add_filters(){
@@ -39,6 +42,7 @@ class Functions {
         add_filter( 'post_type_link', array($this, 'remove_slug' ),10, 3 );
         add_filter( 'enter_title_here', array($this,'wpb_change_title_text' ));
         add_filter( 'manage_gallery_posts_columns', array($this, 'gallery_column'), 10);
+        add_filter('parse_query', array($this, 'convert_id_to_term_in_query') );
     }
 
     // public function include_custom_jquery() {
@@ -257,7 +261,53 @@ class Functions {
             echo   the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid' ) );
     
         }
-    }        
+    }  
+
+    function create_dogs_tax() {
+      register_taxonomy(
+        'type',
+        'dogs',
+        array(
+          'label' => __( 'Type' ),
+          'rewrite' => array( 'slug' => 'type' ),
+          'hierarchical' => true,
+          'show_ui'           => true,
+          'show_admin_column' => true,
+          'query_var'         => true,
+        )
+      );
+    }
+
+    function filter_post_type_by_taxonomy() {
+      global $typenow;
+      $post_type = 'dogs'; // change to your post type
+      $taxonomy  = 'type'; // change to your taxonomy
+      if ($typenow == $post_type) {
+        $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+        $info_taxonomy = get_taxonomy($taxonomy);
+        wp_dropdown_categories(array(
+          'show_option_all' => sprintf( __( 'Wszystkie (typy)', 'textdomain' ), $info_taxonomy->label ),
+          'taxonomy'        => $taxonomy,
+          'name'            => $taxonomy,
+          'orderby'         => 'name',
+          'selected'        => $selected,
+          'show_count'      => true,
+          'hide_empty'      => true,
+        ));
+      };
+    }
+
+    function convert_id_to_term_in_query($query) {
+      global $pagenow;
+      $post_type = 'dogs'; // change to your post type
+      $taxonomy  = 'type'; // change to your taxonomy
+      $q_vars    = &$query->query_vars;
+      if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
+        $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+        $q_vars[$taxonomy] = $term->slug;
+      }
+    }
+    
 
 }
 

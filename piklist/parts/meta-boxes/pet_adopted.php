@@ -19,3 +19,16 @@ piklist('field', array(
     '1' => 'Hurra!'
   )
 ));
+
+piklist('field', array(
+  'type' => 'checkbox',
+  'field' => 'rainbow_public',
+  'label' => 'Zaznacz jeśli zwierzak poszedł za tęczowy most',
+  'value' => '0',
+  'attributes' => array(
+     'class' => 'text'
+   ),
+  'choices' => array(
+    '1' => ':('
+  )
+));
