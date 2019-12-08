@@ -38,12 +38,29 @@
 
       $theme_options = get_option('my_theme_settings');
       $fb_link = $theme_options['facebook'];
+      $fb_link2 = $theme_options['facebook2'];
 
-      if(!empty($fb_link)){ ?>
-        <span class="navbar-text">
-          <a href="<?php echo $fb_link; ?>"/><i class="fab fa-facebook-f"></i></a>
-        </span>
+      if(!empty($fb_link) || (!empty($fb_link2))){ ?>
+      <div class="dropdown socials">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fab fa-facebook-f"></i> Jesteśmy na FB
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li> <a href="<?php echo $fb_link; ?>">Fundacja Kundel Bury</a></li>
+          <li> <a href="<?php echo $fb_link2; ?>">Wolontariusze Schroniska</a></li>
+      </ul>
+        
+        
+      </div>
+      <span class="navbar-text socialSpan">
+      <a href="<?php echo $fb_link; ?>"> <i class="fab fa-facebook-f"></i>Fundacja Kundel Bury</a>
+       
+      </span>
+      <span class="navbar-text socialSpan">
+      <a href="<?php echo $fb_link2; ?>"> <i class="fab fa-facebook-f"></i>Wolontariusze Schroniska</a>
+      </span>
       <?php } ?>
+
       </div>
     </nav>
   </header>

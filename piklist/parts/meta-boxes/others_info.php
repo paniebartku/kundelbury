@@ -1,26 +1,26 @@
 <?php
 
 /*
-Title: Medor Kot - Podastawowe dane
-Post Type: cats
+Title: Medor Zwierzę - Podastawowe dane
+Post Type: others
 Order: 1
 */
 
 piklist('field', array(
     'type' => 'group'
-    ,'field' => 'cat_info' // removing this parameter saves all fields as separate meta
-    ,'label' => __('Informacje o kocie')
+    ,'field' => 'others_info' // removing this parameter saves all fields as separate meta
+    ,'label' => __('Informacje o zwierzęciu')
     ,'list' => false
-    ,'description' => __('Wpisz podstawowe dane kota.')
+    ,'description' => __('Wpisz podstawowe dane zwierzęcia.')
     ,'fields' => array(
         
       array(
         'type' => 'text'
         ,'field' => 'race'
-        ,'label' => __('Kot w typie')
+        ,'label' => __('Zwierzę w typie')
         ,'columns' => 4
         ,'attributes' => array(
-          'placeholder' => 'Wpisz typ kota, np. dachowiec'
+          'placeholder' => 'Wpisz typ zwierzęcia, np. dachowiec'
         )
       )
       ,array(
@@ -39,7 +39,7 @@ piklist('field', array(
       ,array(
         'type' => 'select'
         ,'field' => 'size'
-        ,'label' => __('Rozmiar kota')
+        ,'label' => __('Rozmiar zwierzęcia')
         ,'columns' => 4
         ,'choices' => array(
             
@@ -52,7 +52,7 @@ piklist('field', array(
       ,array(
         'type' => 'text'
         ,'field' => 'age'
-        ,'label' => __('Wiek kota')
+        ,'label' => __('Wiek zwierzęcia')
         ,'columns' => 5
         ,'attributes' => array(
           'placeholder' =>'Wpisz pełny wiek, np. "3 lata" lub "2 miesiące"'

@@ -2,7 +2,7 @@
 
 /*
 Title: Medor - Galeria
-Post Type: dogs, cats
+Post Type: dogs, others
 Context: side
 Order:3
 */

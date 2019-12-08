@@ -4,7 +4,7 @@ require get_template_directory() . '/variables/pets.php';
 get_header();
 
 $meta = get_post_custom($post_id);
-$cats_info = unserialize($meta['cat_info'][0]);
+$others_info = unserialize($meta['others_info'][0]);
 
 ?>
 
@@ -24,7 +24,7 @@ $cats_info = unserialize($meta['cat_info'][0]);
   <div class="container block-page__content">
     <div class="row">
       <div class="col-sm-12">
-        <a class="btn btn__primary--left" href="<?php echo get_page_link(322); ?>" role="button"><i class="fas fa-angle-left"></i>Powrót do galerii kotów</a>
+        <a class="btn btn__primary--left" href="<?php echo get_page_link(322); ?>" role="button"><i class="fas fa-angle-left"></i>Powrót do galerii zwierząt</a>
       </div>
     </div>
     <div class="row">
@@ -40,8 +40,8 @@ $cats_info = unserialize($meta['cat_info'][0]);
           </ul>
         <div class="block-single-pet__guardian">
           <h2>Opiekun wirtualny:</h2>
-          <?php if(!empty($cats_info['guardian'])){
-          echo '<h3>'.$cats_info['guardian'].'</h3>'; }else{
+          <?php if(!empty($others_info['guardian'])){
+          echo '<h3>'.$others_info['guardian'].'</h3>'; }else{
           echo '<h3>Poszukiwany</h3>';
           }?>
         </div>
@@ -52,18 +52,18 @@ $cats_info = unserialize($meta['cat_info'][0]);
           <div class="row">
             <div class="col-6">
               <div class="block-single-pet__info--race">
-                <h2>Kot w typie:</h2>
-                <span class="main"><?php echo $cats_info['race']; ?></span>
+                <h2>Zwierzę w typie:</h2>
+                <span class="main"><?php echo $others_info['race']; ?></span>
               </div>
             </div>
             <div class="col-6">
               <div class="block-single-pet__info--sex">
                 <h2>Płeć:</h2>
                 <?php 
-                if($cats_info['sex'] == "first"){
-                  echo "<span class='main'>kot</span>";
+                if($others_info['sex'] == "first"){
+                  echo "<span class='main'>samiec</span>";
                   }else 
-                {echo "<span class='main'>kotka</span>";}
+                {echo "<span class='main'>samicas</span>";}
                 ?>                      
               </div>
             </div>
@@ -73,9 +73,9 @@ $cats_info = unserialize($meta['cat_info'][0]);
               <div class="block-single-pet__info--size">
               <h2>Rozmiar:</h2>
               <?php  
-              if($cats_info['size'] == "first"){
+              if($others_info['size'] == "first"){
                   echo "<span class='main'>mały</span>";
-                }elseif ($cats_info['size'] == "second")
+                }elseif ($others_info['size'] == "second")
                 {echo "<span class='main'>średni</span>";}
               else {echo "<span class='main'>duży</span>";}
               ?>
@@ -86,7 +86,7 @@ $cats_info = unserialize($meta['cat_info'][0]);
                 <h2>Wiek:</h2>
                 <span class="main">
                 <?php
-                echo $cats_info['age']; ?>
+                echo $others_info['age']; ?>
                 </span>
               </div>
             </div>

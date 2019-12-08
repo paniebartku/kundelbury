@@ -7396,6 +7396,11 @@ a {
 .nav-item .active {
   color: white !important; }
 
+@media (max-width: 400px) {
+  .nav-item .nav-link {
+    text-align: left;
+    padding-left: 2.5rem; } }
+
 .nav-item .nav-link:hover {
   color: white !important;
   background: #ff7701;
@@ -7403,6 +7408,13 @@ a {
 
 li.nav-item.active a.nav-link {
   color: white !important; }
+
+@media (max-width: 400px) {
+  .dropdown-item {
+    padding-left: 2.5rem;
+    text-align: left;
+    width: 100%;
+    white-space: normal; } }
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: white;
@@ -7413,7 +7425,8 @@ li.nav-item.active a.nav-link {
 @media (max-width: 991px) {
   .dropdown-menu {
     border: none;
-    text-align: center; }
+    text-align: center;
+    border-radius: 0; }
   .navbar-brand img {
     height: 7vh; } }
 
@@ -7438,6 +7451,70 @@ li.nav-item.active a.nav-link {
       font-size: 1.5rem; }
       .navbar-text a i:hover {
         color: white; }
+      @media (max-width: 400px) {
+        .navbar-text a i {
+          font-size: 1rem;
+          padding-left: 0; } }
+
+.socials {
+  margin-right: 3rem; }
+  .socials .dropdown-menu {
+    min-width: 15rem; }
+    @media (max-width: 1200px) {
+      .socials .dropdown-menu {
+        min-width: 13rem; } }
+    @media (max-width: 1100px) {
+      .socials .dropdown-menu {
+        min-width: 12rem; } }
+  @media (max-width: 1200px) {
+    .socials .btn {
+      letter-spacing: 0;
+      font-size: 14px; } }
+  @media (max-width: 1100px) {
+    .socials .btn {
+      letter-spacing: 0;
+      font-size: 12px;
+      padding: 0.4rem 0.6rem; } }
+  @media (max-width: 991px) {
+    .socials .btn {
+      display: none; } }
+  .socials a {
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    padding: 0.25rem 1.5rem;
+    width: 100%;
+    display: block;
+    font-size: 15px; }
+    @media (max-width: 1100px) {
+      .socials a {
+        padding: 0.1rem 1rem; } }
+    .socials a:hover {
+      background-color: #ff7701;
+      color: white; }
+    @media (max-width: 991px) {
+      .socials a {
+        display: none; } }
+
+.socialSpan {
+  display: none; }
+  @media (max-width: 991px) {
+    .socialSpan {
+      display: block; }
+      .socialSpan a {
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.5) !important;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        padding-right: 3rem; }
+        .socialSpan a:hover {
+          color: white !important; } }
+  @media (max-width: 400px) {
+    .socialSpan a {
+      justify-content: flex-start;
+      font-size: 13px; } }
 
 .btn {
   display: inline-block;
@@ -7568,6 +7645,9 @@ footer {
     margin-top: 1rem; }
     .block-page__pets-loop--single {
       margin-top: 1rem; }
+  .block-page .rainbow {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
 
 .problem-info h3 {
   color: #ff7701; }

@@ -2,7 +2,7 @@
 
 /*
 Title: Główny obrazek zwierzaka
-Post Type: dogs, cats
+Post Type: dogs, others
 Context: side
 Order: 2
 */

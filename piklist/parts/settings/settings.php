@@ -8,7 +8,16 @@
  piklist('field', array(
     'type' => 'url',
     'field' => 'facebook',
-    'label' => 'Link do profilu na facebook'
+    'label' => 'Pierwszy link do profilu na facebook'
+    ,'attributes' => array(
+  'class' => 'regular-text'
+    )
+  ));
+
+  piklist('field', array(
+    'type' => 'url',
+    'field' => 'facebook2',
+    'label' => 'Drugi link do profilu na facebook'
     ,'attributes' => array(
   'class' => 'regular-text'
     )

@@ -2,7 +2,7 @@
 
 /*
 Title:
-Post Type: dogs, cats
+Post Type: dogs, others
 Context: side
 Order:1
 */

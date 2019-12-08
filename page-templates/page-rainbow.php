@@ -1,6 +1,6 @@
 <?php 
 /*
-Template name: Strona z psami
+Template name: Tęczowy most
 */
 
 get_header();
@@ -35,7 +35,7 @@ get_header();
         </div>
         <div class="row block-page__pet-loop">
         <?php
-        $loop = new WP_Query( array( 'post_type' => 'dogs'));
+        $loop = new WP_Query( array( 'post_type' => array('dogs', 'others')));
         if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); 
             
@@ -46,10 +46,12 @@ get_header();
             $pet_image_main = wp_get_attachment_url($image);
             }
 
-            $public = get_post_meta($post->ID, 'pet_public', true);          
+            $public = get_post_meta($post->ID, 'pet_public', true); 
+            $rainbow = get_post_meta($post->ID, 'rainbow_public', true);          
             ?>
-            <?php  if ($public == false): ?>
-            <div class="col-lg-4 col-md-3 col-sm-12 animated fadeIn dogo">
+           
+            <?php  if (($public == false) && ($rainbow == true)): ?>
+            <div class="col-lg-4 col-md-3 col-sm-12 animated fadeIn dogo rainbow">
                 <div class="pindex " style="">
                     <a href="<?php the_permalink(); ?>">
                         <figure>

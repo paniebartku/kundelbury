@@ -26,7 +26,7 @@ class Functions {
         add_action( 'wp_enqueue_scripts', array($this, 'load_scripts_and_styles') );
         add_action( 'init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
-        add_action( 'init', array($this,'cats_post_type') );
+        add_action( 'init', array($this,'others_post_type') );
         add_action( 'init', array($this,'problems_post_type') );
         add_action( 'init', array($this,'gallery_post_type') );
         add_action( 'widgets_init', array($this,'footer_sidebars')  );
@@ -82,12 +82,13 @@ class Functions {
             'has_archive' => true,
             'rewrite' => array('slug' => "dogs", 'with_front' => false ),
             'menu_icon'   => 'dashicons-image-filter',
+            'taxonomies' => array('type')
           )
         );
       }
 
-      public function cats_post_type() {
-        register_post_type('cats',
+      public function others_post_type() {
+        register_post_type('others',
           array(
             'labels' => array(
               'name' => __( 'Inne Zwierzęta' ),
@@ -104,7 +105,7 @@ class Functions {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => "cats", 'with_front' => false ),
+            'rewrite' => array('slug' => "others", 'with_front' => false ),
             'menu_icon'   => 'dashicons-image-filter',
           )
         );
@@ -233,15 +234,15 @@ class Functions {
         }
     
         if ( ! empty( $query->query['name'] ) ) {
-            $query->set( 'post_type', array( 'post', 'dogs', 'cats', 'problems', 'page' ) );
+            $query->set( 'post_type', array( 'post', 'dogs', 'others', 'problems', 'page' ) );
         }
     }        
 
     public function wpb_change_title_text( $title ){
         $screen = get_current_screen();
      
-        if  ( 'cats' == $screen->post_type ) {
-             $title = 'Wpisz imię kota';
+        if  ( 'others' == $screen->post_type ) {
+             $title = 'Wpisz imię zwierzęcia';
         }
         if  ( 'dogs' == $screen->post_type ) {
             $title = 'Wpisz imię psa';
