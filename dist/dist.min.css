@@ -7640,7 +7640,7 @@ footer {
       margin-bottom: 1.5rem; }
     .block-page__content img {
       height: auto;
-      width: 100%; }
+      max-width: 100%; }
   .block-page__pets-loop {
     margin-top: 1rem; }
     .block-page__pets-loop--single {
