@@ -60,6 +60,7 @@ class Functions {
         remove_post_type_support( 'post', 'excerpt');
         remove_post_type_support( 'page', 'comments');
         remove_post_type_support( 'page', 'thumbnail');
+        remove_post_type_support( 'post', 'thumbnail');
     }
 
     public function dogs_post_type() {

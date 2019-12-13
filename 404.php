@@ -14,10 +14,10 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container block-page__content">
+    <div class="container block-page__content" style="min-height: 40vh;">
         <div class="row">
             <div class="col-12">
-            <h1>Przykro nam, ale strona o takim adresie nie istnieje</h1>
+            <h1>Przykro nam, ale strona o takim adresie nie istnieje.</h1>
             </div>
         </div>
     </div>
