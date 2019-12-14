@@ -7325,7 +7325,9 @@ p {
     -webkit-animation-name: fadeIn;
             animation-name: fadeIn; } }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box; }
 
 html {
@@ -7339,11 +7341,26 @@ body.customize-support {
   margin-top: -2rem; }
 
 /*font-family: 'Raleway', sans-serif;*/
-h1, h2, h3, h4, h5, h6, p, ul, li, ol {
-  font-family: 'Raleway', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol {
+  font-family: "Raleway", sans-serif; }
 
 h1 {
   font-size: 2rem; }
+
+h3 {
+  font-size: 1.3rem; }
+
+h4 {
+  font-size: 1.2rem; }
 
 a {
   color: #ff7701; }
@@ -7361,6 +7378,9 @@ a {
 
 ::placeholder {
   color: gray; }
+
+.wp-caption.aligncenter {
+  max-width: 100% !important; }
 
 .navbar {
   padding: 1rem;
@@ -7645,6 +7665,13 @@ footer {
     margin-top: 1rem; }
     .block-page__pets-loop--single {
       margin-top: 1rem; }
+  .block-page__peopleHeader {
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
   .block-page .rainbow {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }

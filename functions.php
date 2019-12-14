@@ -1,6 +1,7 @@
 <?php
 
-require get_template_directory() . '/inc/walker.php';
+require get_template_directory() . '/inc/class.Walker.php';
+require get_template_directory() . '/inc/class.RemoveComments.php';
 
 class Functions {
     public function __construct() {
@@ -19,6 +20,9 @@ class Functions {
         add_theme_support( 'custom-logo');
         add_theme_support( 'post-thumbnails' );
         add_image_size( 'medor-size', 600, 400, array( 'left', 'top' ) );
+        add_image_size( 'people-size', 600, 600, array( 'left', 'top' ) );
+
+        add_post_type_support( 'people', 'thumbnail' );
     }
 
     public function add_actions() {
@@ -26,6 +30,7 @@ class Functions {
         add_action( 'wp_enqueue_scripts', array($this, 'load_scripts_and_styles') );
         add_action( 'init', array($this, 'removes'));
         add_action( 'init', array($this,'dogs_post_type') );
+        add_action( 'init', array($this,'people_post_type') );
         add_action( 'init', array($this,'others_post_type') );
         add_action( 'init', array($this,'problems_post_type') );
         add_action( 'init', array($this,'gallery_post_type') );
@@ -33,6 +38,7 @@ class Functions {
         add_action( 'pre_get_posts', array($this, 'parse_request') );
         add_action( 'manage_gallery_posts_custom_column', array($this, 'gallery_column_content'), 10, 2);
         add_action( 'init', array($this, 'create_dogs_tax' ) );
+        add_action( 'init', array($this, 'create_people_tax' ) );
         add_action('restrict_manage_posts', array($this, 'filter_post_type_by_taxonomy') );
 
     }
@@ -42,7 +48,8 @@ class Functions {
         add_filter( 'post_type_link', array($this, 'remove_slug' ),10, 3 );
         add_filter( 'enter_title_here', array($this,'wpb_change_title_text' ));
         add_filter( 'manage_gallery_posts_columns', array($this, 'gallery_column'), 10);
-        add_filter('parse_query', array($this, 'convert_id_to_term_in_query') );
+        add_filter( 'parse_query', array($this, 'convert_id_to_term_in_query') );
+        add_filter( 'wpseo_metabox_prio', array($this, 'yoasttobottom') );
     }
 
     // public function include_custom_jquery() {
@@ -88,6 +95,31 @@ class Functions {
         );
       }
 
+      public function people_post_type() {
+        register_post_type('people',
+          array(
+            'labels' => array(
+              'name' => __( 'Ludzie' ),
+              'singular_name' => __( 'Osoba' ),
+              'add_new' => 'Dodaj Osobę',
+              'all_items' => 'Wszyscy Ludzie',
+              'add_new_item' => 'Dodaj Osobę',
+              'edit_item' => 'Edytuj Osobę',
+              'new_item' => 'Nowa Osoba',
+              'view_item' => 'Zobacz Osobę',
+              'search_item' => 'Szukaj Osób',
+              'not_found' => 'Nikogo nie znaleziono',
+              'not_found_in_trash' => 'Nie ma osoby w koszu',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => "people", 'with_front' => false ),
+            'menu_icon'   => 'dashicons-image-filter',
+            'taxonomies' => array('type')
+          )
+        );
+      }
+
       public function others_post_type() {
         register_post_type('others',
           array(
@@ -108,6 +140,7 @@ class Functions {
             'has_archive' => true,
             'rewrite' => array('slug' => "others", 'with_front' => false ),
             'menu_icon'   => 'dashicons-image-filter',
+            'supports' => array('title','editor'),
           )
         );
       }
@@ -235,7 +268,7 @@ class Functions {
         }
     
         if ( ! empty( $query->query['name'] ) ) {
-            $query->set( 'post_type', array( 'post', 'dogs', 'others', 'problems', 'page' ) );
+            $query->set( 'post_type', array( 'post', 'dogs', 'others', 'problems', 'page', 'people' ) );
         }
     }        
 
@@ -248,6 +281,9 @@ class Functions {
         if  ( 'dogs' == $screen->post_type ) {
             $title = 'Wpisz imię psa';
        }
+       if  ( 'people' == $screen->post_type ) {
+        $title = 'Wpisz imię i nazwisko osoby';
+   }
      
         return $title;
     }        
@@ -272,6 +308,21 @@ class Functions {
         array(
           'label' => __( 'Type' ),
           'rewrite' => array( 'slug' => 'type' ),
+          'hierarchical' => true,
+          'show_ui'           => true,
+          'show_admin_column' => true,
+          'query_var'         => true,
+        )
+      );
+    }
+
+    function create_people_tax() {
+      register_taxonomy(
+        'role',
+        'people',
+        array(
+          'label' => __( 'Role' ),
+          'rewrite' => array( 'slug' => 'role' ),
           'hierarchical' => true,
           'show_ui'           => true,
           'show_admin_column' => true,
@@ -309,6 +360,10 @@ class Functions {
         $q_vars[$taxonomy] = $term->slug;
       }
     }
+
+    public function yoasttobottom() {
+      return 'low';
+   }
     
 
 }
