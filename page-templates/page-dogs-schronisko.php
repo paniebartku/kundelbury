@@ -40,9 +40,8 @@ get_header();
             'tax_query' => array(
                 array(
                     'taxonomy' => 'type',
-                'field' => 'slug',
-                'terms' => 'psy-schroniska',
-                    
+                    'field' => 'slug',
+                    'terms' => 'psy-schroniska',  
                 )
             )
             )

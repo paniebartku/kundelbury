@@ -24,9 +24,20 @@ $dogs_info = unserialize($meta['dogs_info'][0]);
   <div class="container block-page__content">
     <div class="row">
       <div class="col-sm-12">
+      <?php
+          global $post; 
+      if (    ( $post->post_type == 'dogs' ) 
+          && has_term( 'psy-schroniska', 'type' )
+      ) { ?>
+        <a class="btn btn__primary--left" href=<?php echo get_page_link(363); ?> role="button"><i class="fas fa-angle-left"></i>Powrót do galerii psów</a>
+      <?php } else  if (( $post->post_type == 'dogs' ) 
+          && has_term( 'psy-fundacji', 'type' )){ ?>
         <a class="btn btn__primary--left" href=<?php echo get_page_link(113); ?> role="button"><i class="fas fa-angle-left"></i>Powrót do galerii psów</a>
+      <?php } ?>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-lg-6">
         <div class="block-gallery">
